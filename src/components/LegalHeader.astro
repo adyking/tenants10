@@ -1,0 +1,40 @@
+---
+// Minimal header for legal/static pages (privacy, terms, cookies, dpa,
+// imprint) — just the logo and a way back to the homepage. These pages
+// don't need the full marketing Navbar (feature anchors, language switcher
+// menu), but had no way back to the site at all, which is the actual bug
+// this fixes.
+interface Props {
+  lang?: 'en' | 'de' | 'fr' | 'it';
+  label?: string;
+}
+const { lang = 'en', label } = Astro.props;
+
+const homePaths: Record<string, string> = { en: '/', de: '/de', fr: '/fr', it: '/it' };
+const labels: Record<string, string> = {
+  en: 'Back to tenants10.com',
+  de: 'Zurück zu tenants10.com',
+  fr: 'Retour à tenants10.com',
+  it: 'Torna a tenants10.com',
+};
+const homeHref = homePaths[lang] ?? '/';
+const linkLabel = label ?? labels[lang] ?? labels.en;
+---
+
+<header class="border-b border-gray-100">
+  <div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href={homeHref} class="flex items-center gap-1.5">
+      <img src="/logo-icon.png" alt="Tenants10" class="h-7 w-7" />
+      <img src="/logo-text.png" alt="Tenants10" class="h-4" />
+    </a>
+    <a
+      href={homeHref}
+      class="text-sm font-medium text-gray-600 hover:text-primary transition-colors flex items-center gap-1"
+    >
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+      </svg>
+      {linkLabel}
+    </a>
+  </div>
+</header>
