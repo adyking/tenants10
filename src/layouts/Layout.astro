@@ -1,4 +1,6 @@
 ---
+import CookieConsent from '../components/CookieConsent.astro';
+
 export interface Props {
   title: string;
   description: string;
@@ -48,6 +50,7 @@ const ogImage = `${siteUrl}/og-image.jpg`;
   </head>
   <body class="font-sans text-text-dark antialiased">
     <slot />
+    <CookieConsent />
   </body>
 </html>
 

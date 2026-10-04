@@ -207,10 +207,11 @@
     "legal": {
       "title": "Légal",
       "links": [
-        { "label": "Politique de confidentialité", "href": "#" },
-        { "label": "Conditions d'utilisation", "href": "#" },
-        { "label": "Politique de cookies", "href": "#" },
-        { "label": "Mentions légales", "href": "#" }
+        { "label": "Politique de confidentialité", "href": "/fr/privacy" },
+        { "label": "Conditions d'utilisation", "href": "/fr/terms" },
+        { "label": "Politique de cookies", "href": "/fr/cookies" },
+        { "label": "Accord de traitement des données", "href": "/fr/dpa" },
+        { "label": "Mentions légales", "href": "/imprint" }
       ]
     },
     "copyright": "© 2026 Tenants10. Tous droits réservés."

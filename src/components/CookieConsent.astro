@@ -1,0 +1,73 @@
+---
+// Minimal cookie consent banner for the public marketing site (not the
+// logged-in web app, which only ever sets strictly-necessary session
+// storage and doesn't need this). Backs the claims made in /cookies:
+// nothing beyond strictly-necessary storage runs until the visitor
+// accepts, and "Reject" is honoured by the site never loading analytics.
+---
+
+<div
+  id="cookie-consent-banner"
+  class="fixed inset-x-0 bottom-0 z-50 hidden border-t border-slate-200 bg-white px-6 py-5 shadow-[0_-4px_16px_rgba(0,0,0,0.08)]"
+>
+  <div class="mx-auto flex max-w-5xl flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
+    <p class="text-sm text-text-muted">
+      We use strictly necessary cookies to run this site, and — only with your consent — analytics
+      cookies to understand how it's used. See our
+      <a href="/cookies" class="font-medium text-primary underline">Cookie Policy</a>.
+    </p>
+    <div class="flex shrink-0 gap-3">
+      <button
+        id="cookie-consent-reject"
+        type="button"
+        class="rounded-md border border-slate-300 px-4 py-2 text-sm font-medium text-text hover:bg-slate-50"
+      >
+        Reject non-essential
+      </button>
+      <button
+        id="cookie-consent-accept"
+        type="button"
+        class="rounded-md bg-primary px-4 py-2 text-sm font-medium text-white hover:opacity-90"
+      >
+        Accept all
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const KEY = 'tenants10-cookie-consent';
+
+  function applyConsent(value: 'accepted' | 'rejected') {
+    // Non-essential (analytics) scripts should check this value before
+    // loading — e.g. `if (localStorage.getItem('tenants10-cookie-consent') === 'accepted') { ... }`.
+    // No analytics script is wired in yet, so this is currently a no-op
+    // beyond recording the choice; it's the hook for when one is added.
+    document.documentElement.dataset.cookieConsent = value;
+  }
+
+  try {
+    const existing = localStorage.getItem(KEY);
+    if (existing === 'accepted' || existing === 'rejected') {
+      applyConsent(existing);
+    } else {
+      document.getElementById('cookie-consent-banner')?.classList.remove('hidden');
+    }
+  } catch {
+    // localStorage unavailable (e.g. blocked) — fail open without a banner
+    // rather than block the page.
+  }
+
+  function choose(value: 'accepted' | 'rejected') {
+    try {
+      localStorage.setItem(KEY, value);
+    } catch {
+      /* best-effort only */
+    }
+    applyConsent(value);
+    document.getElementById('cookie-consent-banner')?.classList.add('hidden');
+  }
+
+  document.getElementById('cookie-consent-accept')?.addEventListener('click', () => choose('accepted'));
+  document.getElementById('cookie-consent-reject')?.addEventListener('click', () => choose('rejected'));
+</script>

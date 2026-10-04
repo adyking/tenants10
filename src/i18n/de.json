@@ -207,10 +207,11 @@
     "legal": {
       "title": "Rechtliches",
       "links": [
-        { "label": "Datenschutz", "href": "#" },
-        { "label": "AGB", "href": "#" },
-        { "label": "Cookie-Richtlinie", "href": "#" },
-        { "label": "Impressum", "href": "#" }
+        { "label": "Datenschutz", "href": "/de/privacy" },
+        { "label": "AGB", "href": "/de/terms" },
+        { "label": "Cookie-Richtlinie", "href": "/de/cookies" },
+        { "label": "Auftragsverarbeitungsvertrag", "href": "/de/dpa" },
+        { "label": "Impressum", "href": "/imprint" }
       ]
     },
     "copyright": "© 2026 Tenants10. Alle Rechte vorbehalten."

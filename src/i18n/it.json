@@ -207,10 +207,11 @@
     "legal": {
       "title": "Legale",
       "links": [
-        { "label": "Informativa sulla privacy", "href": "#" },
-        { "label": "Termini di servizio", "href": "#" },
-        { "label": "Politica sui cookie", "href": "#" },
-        { "label": "Note legali", "href": "#" }
+        { "label": "Informativa sulla privacy", "href": "/it/privacy" },
+        { "label": "Termini di servizio", "href": "/it/terms" },
+        { "label": "Politica sui cookie", "href": "/it/cookies" },
+        { "label": "Accordo sul trattamento dei dati", "href": "/it/dpa" },
+        { "label": "Note legali", "href": "/imprint" }
       ]
     },
     "copyright": "© 2026 Tenants10. Tutti i diritti riservati."
