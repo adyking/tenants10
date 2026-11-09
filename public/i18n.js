@@ -762,8 +762,14 @@ window.t10ApplyLang = t10ApplyLang;
 document.addEventListener('DOMContentLoaded', () => {
   let initial = 'en';
   try {
+    // ?lang= wins over everything else -- it's how the old localized
+    // paths (/de, /fr, /it) redirect here (see staticwebapp.config.json),
+    // so a bookmarked or search-indexed link still opens in the right
+    // language instead of silently falling back to English.
+    const fromQuery = new URLSearchParams(location.search).get('lang');
     const saved = localStorage.getItem('t10_lang');
-    if (saved && T10_I18N[saved]) initial = saved;
+    if (fromQuery && T10_I18N[fromQuery]) initial = fromQuery;
+    else if (saved && T10_I18N[saved]) initial = saved;
     else {
       const nav = (navigator.language || 'en').slice(0, 2).toLowerCase();
       if (T10_I18N[nav]) initial = nav;
