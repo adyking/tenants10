@@ -244,7 +244,6 @@ h2{font-size:clamp(42px,4.1vw,64px);line-height:1.08}.section-heading{display:fl
 .hero-bottom {
   position: relative;
   min-height: 57px;
-  max-width: none;
   border-color: var(--line);
   background: var(--white);
 }
