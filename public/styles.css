@@ -189,6 +189,7 @@ h2{font-size:clamp(42px,4.1vw,64px);line-height:1.08}.section-heading{display:fl
 
 .hero-grid {
   display: block;
+  position: relative;
   min-height: clamp(620px, 46.25vw, 760px);
   padding-top: clamp(49px, 4.7vw, 82px);
   padding-bottom: 56px;
