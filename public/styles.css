@@ -218,13 +218,17 @@ h2{font-size:clamp(42px,4.1vw,64px);line-height:1.08}.section-heading{display:fl
 .hero-art {
   position: absolute;
   z-index: -1;
-  top: 0;
-  right: 0;
-  bottom: 57px;
-  left: 54%;
+  inset: 0 0 57px;
   margin: 0;
   overflow: hidden;
   pointer-events: none;
+  /* Full width so the illustration stays large, but faded out on the left
+     so it never competes with the text/CTA column regardless of how wide
+     the viewport is -- a hard column cutoff (left:54%) kept it from
+     overlapping but made it look small; this keeps the size and loses
+     the overlap instead. */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 32%, black 56%);
+  mask-image: linear-gradient(to right, transparent 0%, transparent 32%, black 56%);
 }
 
 .hero-art > :is(svg, canvas) {
