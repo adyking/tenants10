@@ -218,7 +218,10 @@ h2{font-size:clamp(42px,4.1vw,64px);line-height:1.08}.section-heading{display:fl
 .hero-art {
   position: absolute;
   z-index: -1;
-  inset: 0 0 57px;
+  top: 0;
+  right: 0;
+  bottom: 57px;
+  left: 54%;
   margin: 0;
   overflow: hidden;
   pointer-events: none;
