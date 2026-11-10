@@ -871,4 +871,6 @@ button.demo-control.reset-button {
   .eyebrow{justify-content:center}
   .context-body,.context-grid>div:first-child,.section-heading,.section-heading>div,.questions-grid>div:first-child{display:flex;flex-direction:column;align-items:center;text-align:center}
   .context-chain{justify-content:center;flex-wrap:wrap;row-gap:16px}
+  .adoption-copy{display:flex;flex-direction:column;align-items:center;text-align:center}
+  .adoption-copy>.adoption-steps,.adoption-copy>.fit-copy{text-align:left;align-self:stretch}
 }
