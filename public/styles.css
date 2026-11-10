@@ -845,3 +845,30 @@ button.demo-control.reset-button {
   font-size: 12px;
   font-weight: 600;
 }
+
+/* Mobile hero: centered layout with the building artwork shown in-flow
+   as a static image, full-width stacked CTAs -- consolidated here (at
+   the end of the file) so it reliably wins over the older scattered
+   700px rules earlier in this stylesheet. */
+@media(max-width:700px){
+  .hero-grid{padding-top:32px;padding-bottom:8px;min-height:0}
+  .hero-copy{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .hero .eyebrow{justify-content:center}
+  .hero-lead{max-width:420px}
+  .hero-actions{flex-direction:column;align-items:stretch;width:100%;gap:12px;margin-top:28px}
+  .hero-actions .button{width:100%;justify-content:center}
+  .hero-actions .text-link{justify-content:center}
+  .hero-trust{align-self:center}
+  .hero-footnote{text-align:center}
+  .hero-art{display:block;position:relative;inset:auto;z-index:1;margin-top:32px;width:100%;height:220px;overflow:hidden;border-radius:14px;pointer-events:none}
+  .hero-art>:is(svg,canvas){position:absolute;inset:auto 0 0 auto;width:auto;height:100%;display:block}
+  .hero-bottom{text-align:center}
+
+  /* Content sections: center the eyebrow/heading/lead copy (it reads as an
+     unfinished left-aligned layout on narrow screens) and tighten the
+     section-to-section rhythm, which was leaving oversized gaps. */
+  .section-pad{padding-block:48px}
+  .eyebrow{justify-content:center}
+  .context-body,.context-grid>div:first-child,.section-heading,.section-heading>div,.questions-grid>div:first-child{display:flex;flex-direction:column;align-items:center;text-align:center}
+  .context-chain{justify-content:center;flex-wrap:wrap;row-gap:16px}
+}
