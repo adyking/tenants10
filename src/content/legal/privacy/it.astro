@@ -1,0 +1,89 @@
+---
+interface Props { locale: 'en' | 'de' | 'fr' | 'it' }
+const { locale } = Astro.props;
+const path = (doc: string) => (locale === 'en' ? `/${doc}/` : `/${locale}/${doc}/`);
+---
+<h2>1. Chi siamo</h2>
+  <p>La presente Informativa sulla privacy è pubblicata da Tenants10 KlG, Grütstrasse 28, 8134 Adliswil, Switzerland (UID CHE-431.347.772) ("Tenants10", "noi", "nostro"), titolare del trattamento per il sito web, l'applicazione web e le applicazioni mobili di Tenants10 (congiuntamente, il "Servizio"), salvo quanto diversamente indicato alla Sezione 3 di seguito.</p>
+  <p>La presente Informativa è redatta in conformità alla legge federale svizzera sulla protezione dei dati (FADP, legge federale sul trattamento dei dati, LPD/nLPD, nella versione rivista, in vigore dal 1° settembre 2023). Qualora un utente o un inquilino si trovi nello Spazio economico europeo, si applicano inoltre le pertinenti disposizioni del Regolamento generale sulla protezione dei dati dell'UE (RGPD).</p>
+
+  <h2>2. A chi si applica la presente Informativa</h2>
+  <p>Il Servizio è utilizzato da tre categorie di persone, alle quali la presente Informativa si applica:</p>
+  <ul>
+    <li>Utenti aziendali — dipendenti di amministrazioni immobiliari, gestori di immobili, fornitori di servizi e altri clienti aziendali titolari di un account sulla piattaforma.</li>
+    <li>Occupanti / inquilini — persone che vivono o utilizzano un edificio gestito tramite il Servizio (tramite il portale occupanti o l'app mobile), invitate da uno dei nostri clienti aziendali.</li>
+    <li>Visitatori — persone che navigano su tenants10.com senza un account.</li>
+  </ul>
+
+  <h2>3. Il nostro ruolo: titolare vs. responsabile del trattamento</h2>
+  <p>Per i dati dell'account proprio di un utente aziendale (accesso, profilo, ruolo, modalità di utilizzo della piattaforma) e per i visitatori del nostro sito web, Tenants10 è il titolare del trattamento.</p>
+  <p>Per i dati di occupanti/inquilini inseriti nella piattaforma da uno dei nostri clienti aziendali (un'agenzia, un locatore o un gestore di immobili) — nomi, dati di contatto, registrazioni relative a locazione e pagamenti, richieste di manutenzione, messaggi, documenti e simili — il nostro cliente aziendale è il titolare del trattamento, e Tenants10 agisce in qualità di responsabile del trattamento per suo conto, trattando tali dati solo sulla base delle istruzioni documentate del cliente e nell'ambito di un Accordo sul trattamento dei dati (si veda la Sezione 11). Se Lei è un occupante/inquilino e ha una domanda relativa ai Suoi dati, La preghiamo di contattare l'amministrazione immobiliare o l'organizzazione che L'ha invitata sulla piattaforma; tale soggetto è responsabile di rispondere alla Sua richiesta, e noi lo assistiamo in tal senso.</p>
+
+  <h2>4. Informazioni che raccogliamo</h2>
+  <ul>
+    <li><strong>Dati di account &amp; identità:</strong> nome, e-mail, numero di telefono, ruolo, azienda, preferenza linguistica, foto del profilo.</li>
+    <li><strong>Dati immobiliari &amp; di locazione:</strong> informazioni su edificio, unità e contratto di locazione; registrazioni di canoni e pagamenti; informazioni sul deposito cauzionale; richieste di manutenzione e ordini di lavoro; registrazioni di ispezione e conformità.</li>
+    <li><strong>Documenti:</strong> contratti, piantine, fatture, foto e altri file caricati da Lei o dalla Sua organizzazione, conservati nel nostro archivio di documenti.</li>
+    <li><strong>Comunicazioni:</strong> messaggi inviati tramite la chat integrata nell'app, ticket di assistenza e comunicati, incluso il relativo contenuto.</li>
+    <li><strong>Dati di dispositivo &amp; di utilizzo:</strong> indirizzo IP, tipo di browser/dispositivo, versione dell'app, token per le notifiche push, orari di accesso e dati generali di utilizzo/diagnostici.</li>
+    <li><strong>Dati di pagamento:</strong> laddove la fatturazione sia elaborata, i dettagli del metodo di pagamento sono raccolti e conservati direttamente dal nostro fornitore di servizi di pagamento (Stripe) — Tenants10 non conserva i numeri completi delle carte.</li>
+  </ul>
+
+  <h2>5. Come utilizziamo le Sue informazioni</h2>
+  <ul>
+    <li>Fornire, gestire e mantenere il Servizio, incluso il portale occupanti e le app mobili.</li>
+    <li>Elaborare pagamenti di canoni, richieste di manutenzione, prenotazioni e richieste di assistenza.</li>
+    <li>Inviare notifiche relative all'account, all'edificio e al servizio (nell'app, via e-mail e tramite notifiche push).</li>
+    <li>Utilizzare l'IA (incluso Microsoft Azure OpenAI Service) per estrarre e organizzare informazioni dai documenti caricati e per alimentare gli assistenti IA integrati nell'app — si veda la Sezione 6.</li>
+    <li>Tradurre automaticamente messaggi e comunicazioni tra utenti che scrivono in lingue diverse (tramite Microsoft Azure Translator).</li>
+    <li>Mantenere la sicurezza della piattaforma, individuare abusi e conservare un registro di audit dell'attività dell'account.</li>
+    <li>Adempiere agli obblighi legali, applicare i nostri Termini di servizio e proteggere i diritti e la sicurezza dei nostri utenti.</li>
+    <li>Migliorare le prestazioni e l'affidabilità del Servizio.</li>
+  </ul>
+  <p>Non utilizziamo i dati personali per processi decisionali automatizzati che producano effetti giuridici o effetti analogamente significativi, e non vendiamo dati personali.</p>
+
+  <h2>6. Funzionalità IA</h2>
+  <p>Alcune funzionalità (quali l'estrazione automatica di dati dai documenti e gli assistenti IA) inviano il contenuto del documento o del messaggio pertinente a Microsoft Azure OpenAI Service per l'elaborazione. Ciò avviene nell'ambito delle condizioni aziendali di trattamento dei dati di Microsoft, le quali prevedono che i prompt e i risultati trasmessi tramite Azure OpenAI non vengano utilizzati per addestrare i modelli sottostanti di Microsoft o di OpenAI. I suggerimenti generati dall'IA dovrebbero essere verificati da una persona prima di essere utilizzati per decisioni legali, finanziarie o critiche per la sicurezza.</p>
+
+  <h2>7. Con chi condividiamo le informazioni</h2>
+  <p>Non vendiamo dati personali. Li condividiamo solo nella misura necessaria per il funzionamento del Servizio:</p>
+  <ul>
+    <li><strong>All'interno della Sua organizzazione:</strong> gli utenti aziendali visualizzano i dati di occupanti/inquilini secondo i permessi assegnati loro dalla propria organizzazione.</li>
+    <li><strong>Subresponsabili del trattamento</strong> (elencati nella Sezione 8) che ospitano i dati, inviano notifiche, elaborano pagamenti o forniscono funzionalità di IA/traduzione per nostro conto, nell'ambito di accordi scritti sul trattamento dei dati.</li>
+    <li><strong>Autorità,</strong> laddove richiesto dal diritto svizzero, da un valido procedimento legale, o per proteggere i diritti, i beni o la sicurezza di Tenants10, dei nostri utenti o del pubblico.</li>
+    <li><strong>Un soggetto successore,</strong> in caso di fusione, acquisizione o cessione di attività, fatti salvi gli stessi impegni in materia di protezione dei dati qui descritti.</li>
+  </ul>
+
+  <h2>8. Subresponsabili del trattamento &amp; trasferimenti internazionali</h2>
+  <p>La nostra infrastruttura principale (server applicativi, database e archiviazione dei file) è ospitata da Microsoft Azure nella regione Switzerland North, il che significa che i dati essenziali della piattaforma sono conservati in Svizzera. Alcune funzionalità si basano su subresponsabili che possono trattare dati fuori dalla Svizzera, in particolare negli Stati Uniti:</p>
+  <ul>
+    <li>Microsoft Azure (Switzerland North, con alcune chiamate di IA/traduzione instradate tramite gli endpoint regionali di Azure) — hosting, database, archiviazione dei file, estrazione di documenti tramite IA, traduzione.</li>
+    <li>Google Firebase Cloud Messaging (Stati Uniti) — invio delle notifiche push su dispositivi mobili e browser. I contenuti delle notifiche push sono volutamente generici (solo un'etichetta di categoria — ad es. "Nuovo messaggio" — mai nomi, contenuto dei messaggi o importi), proprio perché questo canale esce dalla nostra infrastruttura.</li>
+    <li>Resend — invio di e-mail transazionali (e-mail relative ad account, notifiche e reimpostazione della password).</li>
+    <li>Stripe — elaborazione dei pagamenti per gli abbonamenti alla piattaforma, laddove applicabile.</li>
+  </ul>
+  <p>Laddove dati personali siano trasferiti fuori dalla Svizzera o dal SEE verso un paese privo di un livello di protezione dei dati riconosciuto come adeguato, ci basiamo sulle clausole contrattuali standard dei fornitori e, laddove applicabile, sul quadro EU-US / Swiss-US Data Privacy Framework, come garanzia giuridica per tale trasferimento.</p>
+
+  <h2>9. Conservazione dei dati</h2>
+  <p>Conserviamo i dati personali per tutto il tempo in cui l'account o l'organizzazione correlata è attivo sul Servizio, e per un periodo ragionevole successivo per adempiere a obblighi legali, contabili e di risoluzione delle controversie — generalmente fino a 10 anni per i documenti finanziari e contrattuali, in linea con i requisiti svizzeri in materia di conservazione (art. 958f CO). Quando un'organizzazione chiude il proprio account, cancelliamo o anonimizziamo i dati personali degli occupanti/inquilini entro un periodo ragionevole, salvo laddove una conservazione più lunga sia richiesta dalla legge o concordata con tale organizzazione nell'ambito dell'Accordo sul trattamento dei dati.</p>
+
+  <h2>10. Cookie &amp; tecnologie simili</h2>
+  <p>Il nostro sito web e la nostra applicazione web utilizzano cookie e local storage simile per funzioni essenziali (mantenerLa collegato, memorizzare le preferenze) e, laddove attivato, per finalità analitiche. Consulti la nostra <a href={path('cookies')}>Cookie Policy</a> per l'elenco completo e per gestire le Sue scelte.</p>
+
+  <h2>11. Accordo sul trattamento dei dati (clienti aziendali)</h2>
+  <p>Se Lei è un cliente aziendale (un'agenzia, un locatore o un gestore di immobili) che tratta i dati personali dei propri occupanti/inquilini tramite il Servizio, il nostro <a href={path('dpa')}>Accordo sul trattamento dei dati</a> fa parte del Suo contratto con noi e definisce l'ambito, la finalità, i subresponsabili e le misure di sicurezza applicabili a tale trattamento, come richiesto dall'art. 9 FADP.</p>
+
+  <h2>12. Sicurezza dei dati</h2>
+  <p>Adottiamo misure tecniche e organizzative adeguate alla sensibilità dei dati, tra cui la cifratura in transito, il controllo degli accessi basato su ruoli, la registrazione di audit e la revisione periodica dei subresponsabili terzi. Nessun metodo di trasmissione o conservazione è completamente sicuro, e non possiamo garantire una sicurezza assoluta.</p>
+
+  <h2>13. I Suoi diritti</h2>
+  <p>Ai sensi della FADP (e, laddove applicabile, del RGPD), Lei ha il diritto di richiedere l'accesso, la rettifica, la cancellazione o la limitazione dei dati personali che conserviamo su di Lei, e di opporsi a determinati trattamenti. Se i Suoi dati Le sono stati forniti dalla Sua amministrazione immobiliare o dal Suo datore di lavoro (si veda la Sezione 3), La preghiamo di indirizzare la Sua richiesta in primo luogo a tale soggetto; noi lo assisteremo nella risposta. Può inoltre presentare un reclamo all'Incaricato federale della protezione dei dati e della trasparenza (IFPDT), Feldeggweg 1, 3003 Bern, Switzerland (edoeb.admin.ch), oppure, qualora il RGPD Le sia applicabile, alla Sua autorità locale dell'UE per la protezione dei dati.</p>
+
+  <h2>14. Minori</h2>
+  <p>Il Servizio è destinato all'uso aziendale e a occupanti/inquilini adulti. Non raccogliamo consapevolmente dati personali di minori.</p>
+
+  <h2>15. Modifiche alla presente Informativa</h2>
+  <p>Potremmo aggiornare la presente Informativa di volta in volta. Le modifiche sostanziali saranno comunicate nell'app o tramite e-mail ai titolari degli account, e la data "Ultimo aggiornamento" indicata sopra sarà aggiornata di conseguenza.</p>
+
+  <h2>16. Contattaci</h2>
+  <p>Per domande relative alla presente Informativa sulla privacy, o per esercitare i Suoi diritti, ci contatti a: <a href="mailto:support@tenants10.com">support@tenants10.com</a>, oppure per posta a Tenants10 KlG, Grütstrasse 28, 8134 Adliswil, Switzerland.</p>

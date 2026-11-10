@@ -1,0 +1,89 @@
+---
+interface Props { locale: 'en' | 'de' | 'fr' | 'it' }
+const { locale } = Astro.props;
+const path = (doc: string) => (locale === 'en' ? `/${doc}/` : `/${locale}/${doc}/`);
+---
+<h2>1. Qui nous sommes</h2>
+  <p>La présente Politique de confidentialité est publiée par Tenants10 KlG, Grütstrasse 28, 8134 Adliswil, Switzerland (UID CHE-431.347.772) (« Tenants10 », « nous », « notre »), responsable du traitement pour le site web, l'application web et les applications mobiles de Tenants10 (ensemble, le « Service »), sauf indication contraire à la Section 3 ci-dessous.</p>
+  <p>La présente Politique est rédigée de manière à se conformer à la loi fédérale suisse sur la protection des données (FADP, loi fédérale sur la protection des données, LPD, dans sa version révisée, en vigueur depuis le 1er septembre 2023). Lorsqu'un utilisateur ou un locataire se trouve dans l'Espace économique européen, les dispositions pertinentes du Règlement général sur la protection des données de l'UE (RGPD) s'appliquent en complément.</p>
+
+  <h2>2. À qui s'applique la présente Politique</h2>
+  <p>Le Service est utilisé par trois catégories de personnes, auxquelles la présente Politique s'applique :</p>
+  <ul>
+    <li>Utilisateurs professionnels — employés de gérances immobilières, d'exploitants d'installations, de prestataires et d'autres clients professionnels disposant d'un compte sur la plateforme.</li>
+    <li>Occupants / locataires — personnes résidant dans un immeuble géré via le Service ou l'utilisant (via le portail occupant ou l'application mobile), invitées par l'un de nos clients professionnels.</li>
+    <li>Visiteurs — personnes consultant tenants10.com sans disposer de compte.</li>
+  </ul>
+
+  <h2>3. Notre rôle : responsable du traitement vs. sous-traitant</h2>
+  <p>Pour les données de compte propres à un utilisateur professionnel (connexion, profil, rôle, utilisation de la plateforme) et pour les visiteurs de notre site web, Tenants10 est le responsable du traitement.</p>
+  <p>Pour les données des occupants/locataires saisies dans la plateforme par l'un de nos clients professionnels (une agence, un bailleur ou un exploitant d'installations) — noms, coordonnées, dossiers de bail et de paiement, demandes de maintenance, messages, documents et données similaires — notre client professionnel est le responsable du traitement, et Tenants10 agit en qualité de sous-traitant, traitant ces données uniquement sur instructions documentées de celui-ci et dans le cadre d'un Accord de traitement des données (voir Section 11). Si vous êtes occupant/locataire et avez une question concernant vos données, veuillez contacter la gérance ou l'organisation qui vous a invité sur la plateforme ; elle est responsable de répondre à votre demande, et nous l'assistons à cette fin.</p>
+
+  <h2>4. Informations que nous collectons</h2>
+  <ul>
+    <li><strong>Données de compte &amp; d'identité :</strong> nom, e-mail, numéro de téléphone, rôle, entreprise, préférence linguistique, photo de profil.</li>
+    <li><strong>Données immobilières &amp; locatives :</strong> informations relatives à l'immeuble, au lot et au bail ; dossiers de loyers et de paiements ; informations relatives au dépôt de garantie ; demandes de maintenance et d'ordres de travail ; dossiers d'inspection et de conformité.</li>
+    <li><strong>Documents :</strong> contrats, plans, factures, photos et autres fichiers que vous ou votre organisation téléversez, stockés dans notre espace de stockage de documents.</li>
+    <li><strong>Communications :</strong> messages envoyés via le chat intégré à l'application, tickets d'assistance et annonces, y compris leur contenu.</li>
+    <li><strong>Données d'appareil &amp; d'utilisation :</strong> adresse IP, type de navigateur/d'appareil, version de l'application, jetons de notification push, horaires de connexion, et données générales d'utilisation/de diagnostic.</li>
+    <li><strong>Données de paiement :</strong> lorsque la facturation est traitée, les détails du moyen de paiement sont collectés et stockés directement par notre prestataire de paiement (Stripe) — Tenants10 ne stocke pas les numéros de carte complets.</li>
+  </ul>
+
+  <h2>5. Comment nous utilisons vos informations</h2>
+  <ul>
+    <li>Fournir, exploiter et maintenir le Service, y compris le portail occupant et les applications mobiles.</li>
+    <li>Traiter les paiements de loyer, les demandes de maintenance, les réservations et les demandes d'assistance.</li>
+    <li>Envoyer des notifications relatives au compte, à l'immeuble et au service (dans l'application, par e-mail et par notification push).</li>
+    <li>Utiliser l'IA (y compris Microsoft Azure OpenAI Service) pour aider à extraire et organiser les informations issues des documents téléversés et pour alimenter les assistants IA intégrés à l'application — voir Section 6.</li>
+    <li>Traduire automatiquement les messages et avis entre utilisateurs écrivant dans des langues différentes (via Microsoft Azure Translator).</li>
+    <li>Maintenir la sécurité de la plateforme, détecter les abus et conserver un journal d'audit de l'activité des comptes.</li>
+    <li>Respecter les obligations légales, faire appliquer nos Conditions d'utilisation, et protéger les droits et la sécurité de nos utilisateurs.</li>
+    <li>Améliorer la performance et la fiabilité du Service.</li>
+  </ul>
+  <p>Nous n'utilisons pas les données personnelles à des fins de prise de décision automatisée produisant des effets juridiques ou des effets similaires significatifs, et nous ne vendons pas d'informations personnelles.</p>
+
+  <h2>6. Fonctionnalités IA</h2>
+  <p>Certaines fonctionnalités (telles que l'extraction de données de documents et les assistants IA) envoient le contenu du document ou du message concerné à Microsoft Azure OpenAI Service pour traitement. Cela s'effectue dans le cadre des conditions de traitement des données d'entreprise de Microsoft, qui prévoient que les invites (prompts) et les résultats transmis via Azure OpenAI ne sont pas utilisés pour entraîner les modèles sous-jacents de Microsoft ou d'OpenAI. Les suggestions générées par l'IA doivent être vérifiées par une personne avant d'être utilisées pour des décisions juridiques, financières ou critiques pour la sécurité.</p>
+
+  <h2>7. Avec qui nous partageons des informations</h2>
+  <p>Nous ne vendons pas d'informations personnelles. Nous ne les partageons que dans la mesure nécessaire au fonctionnement du Service :</p>
+  <ul>
+    <li><strong>Au sein de votre organisation :</strong> les utilisateurs professionnels voient les données des occupants/locataires selon les permissions que leur attribue leur organisation.</li>
+    <li><strong>Sous-traitants</strong> (énumérés à la Section 8) qui hébergent des données, envoient des notifications, traitent des paiements ou fournissent des fonctionnalités d'IA/de traduction pour notre compte, dans le cadre d'accords écrits de traitement des données.</li>
+    <li><strong>Autorités,</strong> lorsque la loi suisse ou une procédure légale valable l'exige, ou pour protéger les droits, les biens ou la sécurité de Tenants10, de nos utilisateurs ou du public.</li>
+    <li><strong>Une entité successeure,</strong> en cas de fusion, d'acquisition ou de cession d'actifs, sous réserve des mêmes engagements en matière de protection des données décrits ici.</li>
+  </ul>
+
+  <h2>8. Sous-traitants &amp; transferts internationaux</h2>
+  <p>Notre infrastructure principale (serveurs d'application, base de données et stockage de fichiers) est hébergée par Microsoft Azure dans la région Switzerland North, ce qui signifie que les données essentielles de la plateforme sont stockées en Suisse. Certaines fonctionnalités font appel à des sous-traitants susceptibles de traiter des données hors de Suisse, notamment aux États-Unis :</p>
+  <ul>
+    <li>Microsoft Azure (Switzerland North, certains appels d'IA/de traduction étant acheminés via les points de terminaison régionaux d'Azure) — hébergement, base de données, stockage de fichiers, extraction de documents par IA, traduction.</li>
+    <li>Google Firebase Cloud Messaging (États-Unis) — distribution des notifications push mobiles et navigateur. Le contenu des notifications push est délibérément générique (une simple étiquette de catégorie — par exemple « Nouveau message » — jamais de noms, de contenu de message ni de montants), précisément parce que ce canal sort de notre propre infrastructure.</li>
+    <li>Resend — distribution des e-mails transactionnels (e-mails de compte, de notification et de réinitialisation de mot de passe).</li>
+    <li>Stripe — traitement des paiements pour les abonnements à la plateforme, le cas échéant.</li>
+  </ul>
+  <p>Lorsque des données personnelles sont transférées hors de Suisse ou de l'EEE vers un pays ne disposant pas d'un niveau de protection des données reconnu comme adéquat, nous nous appuyons sur les clauses contractuelles types des fournisseurs et, le cas échéant, sur le cadre EU-US / Swiss-US Data Privacy Framework, en tant que garantie juridique pour ce transfert.</p>
+
+  <h2>9. Conservation des données</h2>
+  <p>Nous conservons les données personnelles aussi longtemps que le compte ou l'organisation concernée est actif sur le Service, et pendant une période raisonnable par la suite afin de satisfaire à des obligations légales, comptables et de résolution de litiges — généralement jusqu'à 10 ans pour les dossiers financiers et contractuels, conformément aux exigences suisses de conservation (art. 958f CO). Lorsqu'une organisation clôture son compte, nous supprimons ou anonymisons les données personnelles des occupants/locataires dans un délai raisonnable, sauf lorsqu'une conservation plus longue est requise par la loi ou convenue avec cette organisation dans le cadre de l'Accord de traitement des données.</p>
+
+  <h2>10. Cookies &amp; technologies similaires</h2>
+  <p>Notre site web et notre application web utilisent des cookies et un stockage local similaire pour des fonctions essentielles (maintien de votre connexion, mémorisation de vos préférences) et, lorsque cela est activé, à des fins d'analyse. Consultez notre <a href={path('cookies')}>Politique de cookies</a> pour la liste complète et la gestion de vos choix.</p>
+
+  <h2>11. Accord de traitement des données (clients professionnels)</h2>
+  <p>Si vous êtes un client professionnel (une agence, un bailleur ou un exploitant d'installations) traitant les données personnelles de vos occupants/locataires via le Service, notre <a href={path('dpa')}>Accord de traitement des données</a> fait partie de votre contrat avec nous et définit la portée, la finalité, les sous-traitants et les mesures de sécurité applicables à ce traitement, conformément à l'art. 9 FADP.</p>
+
+  <h2>12. Sécurité des données</h2>
+  <p>Nous mettons en œuvre des mesures techniques et organisationnelles adaptées à la sensibilité des données, notamment le chiffrement en transit, le contrôle d'accès basé sur les rôles, la journalisation d'audit et l'examen régulier des sous-traitants tiers. Aucune méthode de transmission ou de stockage n'est totalement sûre, et nous ne pouvons garantir une sécurité absolue.</p>
+
+  <h2>13. Vos droits</h2>
+  <p>En vertu de la FADP (et, le cas échéant, du RGPD), vous avez le droit de demander l'accès aux données personnelles que nous détenons à votre sujet, leur rectification, leur suppression ou la limitation de leur traitement, et de vous opposer à certains traitements. Si vos données nous ont été fournies par votre gérance ou votre employeur (voir Section 3), veuillez d'abord adresser votre demande à celui-ci ou celle-ci ; nous l'assisterons dans sa réponse. Vous pouvez également déposer une plainte auprès du Préposé fédéral à la protection des données et à la transparence (PFPDT), Feldeggweg 1, 3003 Bern, Switzerland (edoeb.admin.ch), ou, si le RGPD vous est applicable, auprès de votre autorité locale de protection des données de l'UE.</p>
+
+  <h2>14. Enfants</h2>
+  <p>Le Service est destiné à un usage professionnel et aux occupants/locataires adultes. Nous ne collectons pas sciemment de données personnelles auprès d'enfants.</p>
+
+  <h2>15. Modifications de la présente Politique</h2>
+  <p>Nous pouvons mettre à jour la présente Politique de temps à autre. Les modifications substantielles seront annoncées dans l'application ou par e-mail aux titulaires de compte, et la date de « Dernière mise à jour » ci-dessus sera révisée en conséquence.</p>
+
+  <h2>16. Nous contacter</h2>
+  <p>Pour toute question concernant la présente Politique de confidentialité, ou pour exercer vos droits, contactez-nous à : <a href="mailto:support@tenants10.com">support@tenants10.com</a>, ou par courrier à Tenants10 KlG, Grütstrasse 28, 8134 Adliswil, Switzerland.</p>

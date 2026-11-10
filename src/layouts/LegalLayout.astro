@@ -1,5 +1,6 @@
 ---
 import SiteHeader from '../components/SiteHeader.astro';
+import SvgLibrary from '../components/SvgLibrary.astro';
 import type { Locale } from '../i18n/data';
 import type { LegalDocKey } from '../i18n/legalMeta';
 import { LEGAL_META } from '../i18n/legalMeta';
@@ -58,6 +59,7 @@ const langLinks: Record<Locale, string> = {
   <script src="/app.js?v=6" defer></script>
 </head>
 <body>
+  <SvgLibrary />
   <SiteHeader locale={locale} langLinks={langLinks} />
   <main class="legal-main">
     <a class="legal-back" href={locale === 'en' ? '/' : `/${locale}/`}>{meta.backLink}</a>

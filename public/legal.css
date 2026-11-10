@@ -1,4 +1,4 @@
-.legal-main{padding:48px var(--gutter) 96px}
+.legal-main{max-width:960px;margin:0 auto;padding:48px var(--gutter) 96px}
 .legal-main>*{max-width:760px}
 .legal-main h1{font-size:clamp(28px,4vw,40px);margin:0 0 6px}
 .legal-updated{color:var(--graphite);margin:0 0 40px;font-size:14px}
