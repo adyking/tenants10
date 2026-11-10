@@ -892,11 +892,9 @@ button.demo-control.reset-button {
      the page: intro/standalone copy centers, structured groups (lists,
      link grids) keep a deliberate layout rather than a leftover one. */
   .footer{padding-top:36px;padding-bottom:28px}
-  .footer-top{flex-direction:column;align-items:center;text-align:center;gap:18px}
-  .footer-top>.back-top{order:2}
-  .footer-legal{display:grid;grid-template-columns:1fr 1fr;justify-items:center;text-align:center;gap:4px 8px;margin-top:26px;padding-top:22px}
-  .footer-legal a{padding:10px 6px;font-size:12px;min-height:44px;display:flex;align-items:center;justify-content:center}
-  .footer-legal a:last-child{grid-column:1/-1}
+  .footer-top{flex-direction:row;align-items:center;justify-content:space-between;text-align:left;gap:12px}
+  .footer-legal{display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;margin-top:26px;padding-top:22px}
+  .footer-legal a{padding:10px 6px;font-size:13px;min-height:44px;display:flex;align-items:center;justify-content:center}
   .footer-bottom{align-items:center;text-align:center;gap:12px}
   .footer-language{font-size:13px}
 }
