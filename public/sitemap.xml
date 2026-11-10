@@ -49,29 +49,219 @@
     <lastmod>2026-11-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tenants10.com/terms/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tenants10.com/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tenants10.com/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tenants10.com/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tenants10.com/terms/"/>
+  </url>
+  <url>
+    <loc>https://tenants10.com/de/terms/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tenants10.com/terms/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tenants10.com/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tenants10.com/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tenants10.com/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tenants10.com/terms/"/>
+  </url>
+  <url>
+    <loc>https://tenants10.com/fr/terms/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tenants10.com/terms/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tenants10.com/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tenants10.com/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tenants10.com/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tenants10.com/terms/"/>
+  </url>
+  <url>
+    <loc>https://tenants10.com/it/terms/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tenants10.com/terms/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tenants10.com/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tenants10.com/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tenants10.com/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tenants10.com/terms/"/>
   </url>
   <url>
     <loc>https://tenants10.com/privacy/</loc>
     <lastmod>2026-11-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tenants10.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tenants10.com/de/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tenants10.com/fr/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tenants10.com/it/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tenants10.com/privacy/"/>
+  </url>
+  <url>
+    <loc>https://tenants10.com/de/privacy/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tenants10.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tenants10.com/de/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tenants10.com/fr/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tenants10.com/it/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tenants10.com/privacy/"/>
+  </url>
+  <url>
+    <loc>https://tenants10.com/fr/privacy/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tenants10.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tenants10.com/de/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tenants10.com/fr/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tenants10.com/it/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tenants10.com/privacy/"/>
+  </url>
+  <url>
+    <loc>https://tenants10.com/it/privacy/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tenants10.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tenants10.com/de/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tenants10.com/fr/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tenants10.com/it/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tenants10.com/privacy/"/>
   </url>
   <url>
     <loc>https://tenants10.com/cookies/</loc>
     <lastmod>2026-11-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tenants10.com/cookies/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tenants10.com/de/cookies/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tenants10.com/fr/cookies/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tenants10.com/it/cookies/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tenants10.com/cookies/"/>
+  </url>
+  <url>
+    <loc>https://tenants10.com/de/cookies/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tenants10.com/cookies/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tenants10.com/de/cookies/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tenants10.com/fr/cookies/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tenants10.com/it/cookies/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tenants10.com/cookies/"/>
+  </url>
+  <url>
+    <loc>https://tenants10.com/fr/cookies/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tenants10.com/cookies/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tenants10.com/de/cookies/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tenants10.com/fr/cookies/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tenants10.com/it/cookies/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tenants10.com/cookies/"/>
+  </url>
+  <url>
+    <loc>https://tenants10.com/it/cookies/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tenants10.com/cookies/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tenants10.com/de/cookies/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tenants10.com/fr/cookies/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tenants10.com/it/cookies/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tenants10.com/cookies/"/>
   </url>
   <url>
     <loc>https://tenants10.com/dpa/</loc>
     <lastmod>2026-11-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tenants10.com/dpa/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tenants10.com/de/dpa/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tenants10.com/fr/dpa/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tenants10.com/it/dpa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tenants10.com/dpa/"/>
+  </url>
+  <url>
+    <loc>https://tenants10.com/de/dpa/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tenants10.com/dpa/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tenants10.com/de/dpa/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tenants10.com/fr/dpa/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tenants10.com/it/dpa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tenants10.com/dpa/"/>
+  </url>
+  <url>
+    <loc>https://tenants10.com/fr/dpa/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tenants10.com/dpa/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tenants10.com/de/dpa/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tenants10.com/fr/dpa/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tenants10.com/it/dpa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tenants10.com/dpa/"/>
+  </url>
+  <url>
+    <loc>https://tenants10.com/it/dpa/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tenants10.com/dpa/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tenants10.com/de/dpa/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tenants10.com/fr/dpa/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tenants10.com/it/dpa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tenants10.com/dpa/"/>
   </url>
   <url>
     <loc>https://tenants10.com/imprint/</loc>
     <lastmod>2026-11-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tenants10.com/imprint/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tenants10.com/de/imprint/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tenants10.com/fr/imprint/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tenants10.com/it/imprint/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tenants10.com/imprint/"/>
+  </url>
+  <url>
+    <loc>https://tenants10.com/de/imprint/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tenants10.com/imprint/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tenants10.com/de/imprint/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tenants10.com/fr/imprint/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tenants10.com/it/imprint/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tenants10.com/imprint/"/>
+  </url>
+  <url>
+    <loc>https://tenants10.com/fr/imprint/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tenants10.com/imprint/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tenants10.com/de/imprint/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tenants10.com/fr/imprint/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tenants10.com/it/imprint/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tenants10.com/imprint/"/>
+  </url>
+  <url>
+    <loc>https://tenants10.com/it/imprint/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tenants10.com/imprint/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tenants10.com/de/imprint/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tenants10.com/fr/imprint/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tenants10.com/it/imprint/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tenants10.com/imprint/"/>
   </url>
 </urlset>
