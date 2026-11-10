@@ -44,6 +44,7 @@ function drawNavLens(time) {
 
 function aimNavLens(event) {
   if (!lensPointer.matches || reducedMotion.matches || event.pointerType === 'touch') return;
+  if (event.target.closest('.lang-switch')) { hideNavLens(); return; }
   const bounds = menu.getBoundingClientRect();
   const position = event.clientX - bounds.left;
   const link = navLinks.find(item => position < item.offsetLeft + item.offsetWidth + 2) ?? navLinks.at(-1);
