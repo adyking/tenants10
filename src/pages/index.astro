@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HomeBody from '../components/HomeBody.astro';
+import { t } from '../i18n/data';
+
+const locale = 'en';
+const d = t(locale);
+---
+<Layout locale={locale} title={d.flat['seo.title']} description={d.flat['seo.description']}>
+  <HomeBody locale={locale} />
+</Layout>

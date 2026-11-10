@@ -1,10 +1,3 @@
 {
-  "routes": [
-    { "route": "/de", "redirect": "/?lang=de", "statusCode": 301 },
-    { "route": "/de/*", "redirect": "/?lang=de", "statusCode": 301 },
-    { "route": "/fr", "redirect": "/?lang=fr", "statusCode": 301 },
-    { "route": "/fr/*", "redirect": "/?lang=fr", "statusCode": 301 },
-    { "route": "/it", "redirect": "/?lang=it", "statusCode": 301 },
-    { "route": "/it/*", "redirect": "/?lang=it", "statusCode": 301 }
-  ]
+  "routes": []
 }

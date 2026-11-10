@@ -14,7 +14,7 @@ window.addEventListener('scroll', updateHeaderGlass, { passive: true });
 updateHeaderGlass();
 
 const navLens = $('.nav-lens', menu);
-const navLinks = $$('a', menu);
+const navLinks = $$(':scope > a', menu);
 const lensPointer = window.matchMedia('(min-width: 701px) and (hover: hover) and (pointer: fine)');
 let lensFrame = 0;
 let lensTime;
@@ -103,9 +103,13 @@ $$('a[href^="#"]').forEach(link => {
   });
 });
 
-// Each capability describes the subject of the reserved visual. Content
-// comes from T10_I18N (i18n.js) so it stays in sync with the active language.
-function currentFeatures() { return window.T10_I18N[window.t10Lang()].features; }
+// Each locale page inlines its own slice of copy (see HomeBody.astro) as a
+// <script type="application/json" id="t10-data"> tag -- no more runtime
+// language switching, so this is just that page's own data, parsed once.
+const T10_DATA = JSON.parse(document.getElementById('t10-data').textContent);
+
+// Each capability describes the subject of the reserved visual.
+function currentFeatures() { return T10_DATA.features; }
 function renderActiveFeature() {
   const active = $('[data-feature].active') || $('[data-feature]');
   const feature = currentFeatures()[active.dataset.feature];
@@ -126,7 +130,6 @@ $$('[data-feature]').forEach(button => button.addEventListener('click', () => {
   renderActiveFeature();
   if (!reducedMotion.matches) $('#capture-content').animate([{opacity:.35},{opacity:1}], {duration:240,easing:'ease-out'});
 }));
-document.addEventListener('t10:langchange', renderActiveFeature);
 
 // The chat stages one prewritten exchange with fictional data.
 const aiDemo = $('.ai-demo');
@@ -135,7 +138,7 @@ const aiQuestion = $('#ai-sent');
 const aiQuestionText = $('#ai-sent-text');
 const aiReplayLabel = $('#play-ai span');
 const aiStatus = $('#ai-status');
-function aiDict() { return window.T10_I18N[window.t10Lang()].ai; }
+function aiDict() { return T10_DATA.ai; }
 function samplePrompt() { return aiDict().samplePrompt; }
 function draftPlaceholder() { return aiDict().draftPlaceholder; }
 let aiFrame = 0;
@@ -205,10 +208,6 @@ function playAI() {
   });
 }
 $('#play-ai').addEventListener('click', playAI);
-document.addEventListener('t10:langchange', () => {
-  aiQuestionText.textContent = samplePrompt();
-  if (!aiPlaying) completeAI(false);
-});
 
 function autoplayAI() {
   clearTimeout(aiAutoplayTimer);
@@ -235,8 +234,7 @@ $('.source-reference').setAttribute('aria-controls', 'ai-record');
 $('.source-reference').setAttribute('aria-expanded', 'false');
 
 // Import is an editorial animation with fictional data, not a file picker.
-// Content comes from T10_I18N (i18n.js) so it stays in sync with the active language.
-function importSteps() { return window.T10_I18N[window.t10Lang()].importSteps; }
+function importSteps() { return T10_DATA.importSteps; }
 const importDemo = $('.import-demo');
 const importStage = $('#import-stage');
 const importButtons = $$('[data-import-step]');
@@ -263,7 +261,7 @@ function showImportStep(index) {
   importButtons.forEach((button, i) => button.setAttribute('aria-pressed', String(i === index)));
 }
 
-function importLabels() { return window.T10_I18N[window.t10Lang()].importLabels; }
+function importLabels() { return T10_DATA.importLabels; }
 
 function stopImport() {
   clearTimeout(importTimer);
@@ -326,7 +324,6 @@ $('#reset-import').addEventListener('click', () => {
   showImportStep(0);
   stopImport();
 });
-document.addEventListener('t10:langchange', () => { showImportStep(importStep); stopImport(); });
 function syncMotionPreference() {
   if (reducedMotion.matches) {
     clearTimeout(aiAutoplayTimer);
@@ -379,7 +376,7 @@ form.addEventListener('submit', async event => {
   const invalid = required.filter(input => !validateField(input));
   const status = $('#form-status');
   const submitButton = $('.submit-button');
-  const t = () => window.T10_I18N[window.t10Lang()].formStatus;
+  const t = () => T10_DATA.formStatus;
   status.hidden = false;
   if (invalid.length) {
     status.textContent = t().invalid;
@@ -418,7 +415,7 @@ form.addEventListener('submit', async event => {
 
 async function initHero() {
   const heroArtMount = document.getElementById('hero-art-mount');
-  const heroArtResponse = await fetch('assets/hero-art.svg');
+  const heroArtResponse = await fetch('/assets/hero-art.svg');
   heroArtMount.outerHTML = await heroArtResponse.text();
 
   const introSolid = $('#hero-intro-solid');
@@ -616,7 +613,7 @@ async function initHero() {
     lightElapsed = 0;
     lightsEnabled = Boolean(heroContext);
     lightsPaused = false;
-    toggleHeroLights.textContent = window.T10_I18N[window.t10Lang()].flat['hero.pause'];
+    toggleHeroLights.textContent = T10_DATA.flat['hero.pause'];
     toggleHeroLights.hidden = !lightsEnabled;
     syncHeroVisibility();
   }
@@ -636,15 +633,9 @@ async function initHero() {
   replayHero.addEventListener('click', playHero);
   toggleHeroLights.addEventListener('click', () => {
     lightsPaused = !lightsPaused;
-    const flat = window.T10_I18N[window.t10Lang()].flat;
-    toggleHeroLights.textContent = lightsPaused ? flat['hero.resume'] : flat['hero.pause'];
+    toggleHeroLights.textContent = lightsPaused ? T10_DATA.flat['hero.resume'] : T10_DATA.flat['hero.pause'];
     lastLightTick = undefined;
     queueLightFrame();
-  });
-  document.addEventListener('t10:langchange', () => {
-    if (toggleHeroLights.hidden) return;
-    const flat = window.T10_I18N[window.t10Lang()].flat;
-    toggleHeroLights.textContent = lightsPaused ? flat['hero.resume'] : flat['hero.pause'];
   });
   reducedMotion.addEventListener('change', () => {
     if (reducedMotion.matches) {

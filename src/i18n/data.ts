@@ -1,14 +1,14 @@
-'use strict';
-// Full site translations (EN/DE/FR/IT). `flat` keys map 1:1 to [data-i18n]
-// elements and are applied as innerHTML (all values are our own trusted
-// markup, never user input). `features`, `importSteps` and `ai` are read
-// directly by app.js for the parts of the page it renders dynamically
-// (the feature-tab switcher, the import animation, the AI chat demo) so
-// those stay in sync with whichever language is active.
+// Generated from the former public/i18n.js — single source of truth for all
+// site copy in EN/DE/FR/IT, reused verbatim (no re-authoring) for the
+// per-locale static page build.
+export type Locale = 'en' | 'de' | 'fr' | 'it';
+export const LOCALES: Locale[] = ['en', 'de', 'fr', 'it'];
 
-const T10_I18N = {
+export const T10_I18N = {
   en: {
     flat: {
+      'seo.title': `Tenants10 — AI-native property & facility management for Switzerland`,
+      'seo.description': `Tenants10 connects every building, contract and tenant in one AI-powered platform — built for Swiss property and facility management, in German, French, Italian and English.`,
       'nav.menu': 'Menu',
       'nav.platform': 'Platform',
       'nav.communication': 'Communication',
@@ -167,10 +167,10 @@ const T10_I18N = {
       'footer.imprint': `Imprint`,
     },
     features: {
-      maintenance: { kicker: `A maintenance request`, title: `From submission to resolution.`, image: `assets/screenshots/maintenance-request.jpg`, description: `A tenant reports an issue from the mobile app with photos. Staff see the location, the issue and every update in one record.`, visualBrief: `A maintenance request and its full history`, caption: `What staff see the moment a request comes in.` },
-      property: { kicker: `A property, in context`, title: `From the building to the unit.`, image: `assets/screenshots/property-units.jpg`, description: `Every floor and unit in a property, with the contracts and tenants attached.`, visualBrief: `Floors and units within a selected property`, caption: `The full structure of a property, always up to date.` },
-      contracts: { kicker: `Read by AI`, title: `A contract, linked automatically.`, image: `assets/screenshots/contracts-list.jpg`, description: `Upload a signed lease — Tenants10's AI reads it, links it to the right property, unit and tenant, and captures rent, deposit and the payment due date automatically.`, visualBrief: `A contract linked to its property, unit and tenant`, caption: `No manual data entry. No mismatched records.` },
-      insights: { kicker: `Your operation, at a glance`, title: `A dashboard built from what you use.`, image: `assets/screenshots/insights-dashboard.jpg`, description: `Occupancy, open maintenance cases, compliance deadlines and more — each block only appears if that module is active for your organisation.`, visualBrief: `An operator dashboard, built from your active modules`, caption: `What a facility manager sees first, every morning.` },
+      maintenance: { kicker: `A maintenance request`, title: `From submission to resolution.`, image: `/assets/screenshots/maintenance-request.jpg`, description: `A tenant reports an issue from the mobile app with photos. Staff see the location, the issue and every update in one record.`, visualBrief: `A maintenance request and its full history`, caption: `What staff see the moment a request comes in.` },
+      property: { kicker: `A property, in context`, title: `From the building to the unit.`, image: `/assets/screenshots/property-units.jpg`, description: `Every floor and unit in a property, with the contracts and tenants attached.`, visualBrief: `Floors and units within a selected property`, caption: `The full structure of a property, always up to date.` },
+      contracts: { kicker: `Read by AI`, title: `A contract, linked automatically.`, image: `/assets/screenshots/contracts-list.jpg`, description: `Upload a signed lease — Tenants10's AI reads it, links it to the right property, unit and tenant, and captures rent, deposit and the payment due date automatically.`, visualBrief: `A contract linked to its property, unit and tenant`, caption: `No manual data entry. No mismatched records.` },
+      insights: { kicker: `Your operation, at a glance`, title: `A dashboard built from what you use.`, image: `/assets/screenshots/insights-dashboard.jpg`, description: `Occupancy, open maintenance cases, compliance deadlines and more — each block only appears if that module is active for your organisation.`, visualBrief: `An operator dashboard, built from your active modules`, caption: `What a facility manager sees first, every morning.` },
     },
     importSteps: [
       { title: `Start with your spreadsheet.`, copy: `Property, unit and contract references — however you track them today.`, status: `Import`, symbol: '↑', headers: ['Property', 'Unit', 'Reference'] },
@@ -191,6 +191,8 @@ const T10_I18N = {
 
   de: {
     flat: {
+      'seo.title': `Tenants10 — KI-native Immobilien- und Facility-Verwaltung für die Schweiz`,
+      'seo.description': `Tenants10 verbindet jedes Gebäude, jeden Vertrag und jeden Mieter in einer KI-gestützten Plattform — entwickelt für die Schweizer Immobilien- und Facility-Verwaltung, auf Deutsch, Französisch, Italienisch und Englisch.`,
       'nav.menu': 'Menü',
       'nav.platform': 'Plattform',
       'nav.communication': 'Kommunikation',
@@ -349,10 +351,10 @@ const T10_I18N = {
       'footer.imprint': `Impressum`,
     },
     features: {
-      maintenance: { kicker: `Eine Reparaturmeldung`, title: `Von der Meldung bis zur Lösung.`, image: `assets/screenshots/maintenance-request.jpg`, description: `Ein Mieter meldet ein Anliegen mit Fotos aus der mobilen App. Mitarbeitende sehen Ort, Anliegen und jedes Update in einem Datensatz.`, visualBrief: `Eine Reparaturmeldung mit vollständiger Historie`, caption: `Was Mitarbeitende sehen, sobald eine Anfrage eingeht.` },
-      property: { kicker: `Eine Liegenschaft im Kontext`, title: `Vom Gebäude bis zur Einheit.`, image: `assets/screenshots/property-units.jpg`, description: `Jedes Stockwerk und jede Einheit einer Liegenschaft, mit den dazugehörigen Verträgen und Mietern.`, visualBrief: `Stockwerke und Einheiten einer ausgewählten Liegenschaft`, caption: `Die vollständige Struktur einer Liegenschaft, immer aktuell.` },
-      contracts: { kicker: `Von der KI gelesen`, title: `Ein Vertrag, automatisch verknüpft.`, image: `assets/screenshots/contracts-list.jpg`, description: `Laden Sie einen unterschriebenen Mietvertrag hoch – die KI von Tenants10 liest ihn, verknüpft ihn mit der richtigen Liegenschaft, Einheit und Mieterschaft und erfasst Miete, Kaution und Fälligkeitsdatum automatisch.`, visualBrief: `Ein Vertrag, verknüpft mit Liegenschaft, Einheit und Mieter`, caption: `Keine manuelle Dateneingabe. Keine falsch zugeordneten Datensätze.` },
-      insights: { kicker: `Ihr Betrieb auf einen Blick`, title: `Ein Dashboard, das auf Ihrer Nutzung basiert.`, image: `assets/screenshots/insights-dashboard.jpg`, description: `Belegung, offene Instandhaltungsfälle, Compliance-Fristen und mehr – jeder Block erscheint nur, wenn das entsprechende Modul für Ihre Organisation aktiv ist.`, visualBrief: `Ein Betriebs-Dashboard, basierend auf Ihren aktiven Modulen`, caption: `Was eine Facility-Managerin oder ein Facility-Manager jeden Morgen zuerst sieht.` },
+      maintenance: { kicker: `Eine Reparaturmeldung`, title: `Von der Meldung bis zur Lösung.`, image: `/assets/screenshots/maintenance-request.jpg`, description: `Ein Mieter meldet ein Anliegen mit Fotos aus der mobilen App. Mitarbeitende sehen Ort, Anliegen und jedes Update in einem Datensatz.`, visualBrief: `Eine Reparaturmeldung mit vollständiger Historie`, caption: `Was Mitarbeitende sehen, sobald eine Anfrage eingeht.` },
+      property: { kicker: `Eine Liegenschaft im Kontext`, title: `Vom Gebäude bis zur Einheit.`, image: `/assets/screenshots/property-units.jpg`, description: `Jedes Stockwerk und jede Einheit einer Liegenschaft, mit den dazugehörigen Verträgen und Mietern.`, visualBrief: `Stockwerke und Einheiten einer ausgewählten Liegenschaft`, caption: `Die vollständige Struktur einer Liegenschaft, immer aktuell.` },
+      contracts: { kicker: `Von der KI gelesen`, title: `Ein Vertrag, automatisch verknüpft.`, image: `/assets/screenshots/contracts-list.jpg`, description: `Laden Sie einen unterschriebenen Mietvertrag hoch – die KI von Tenants10 liest ihn, verknüpft ihn mit der richtigen Liegenschaft, Einheit und Mieterschaft und erfasst Miete, Kaution und Fälligkeitsdatum automatisch.`, visualBrief: `Ein Vertrag, verknüpft mit Liegenschaft, Einheit und Mieter`, caption: `Keine manuelle Dateneingabe. Keine falsch zugeordneten Datensätze.` },
+      insights: { kicker: `Ihr Betrieb auf einen Blick`, title: `Ein Dashboard, das auf Ihrer Nutzung basiert.`, image: `/assets/screenshots/insights-dashboard.jpg`, description: `Belegung, offene Instandhaltungsfälle, Compliance-Fristen und mehr – jeder Block erscheint nur, wenn das entsprechende Modul für Ihre Organisation aktiv ist.`, visualBrief: `Ein Betriebs-Dashboard, basierend auf Ihren aktiven Modulen`, caption: `Was eine Facility-Managerin oder ein Facility-Manager jeden Morgen zuerst sieht.` },
     },
     importSteps: [
       { title: `Beginnen Sie mit Ihrer Tabelle.`, copy: `Liegenschafts-, Einheiten- und Vertragsreferenzen – wie auch immer Sie sie heute erfassen.`, status: `Import`, symbol: '↑', headers: ['Liegenschaft', 'Einheit', 'Referenz'] },
@@ -373,6 +375,8 @@ const T10_I18N = {
 
   fr: {
     flat: {
+      'seo.title': `Tenants10 — Gestion immobilière et facility native à l’IA pour la Suisse`,
+      'seo.description': `Tenants10 relie chaque immeuble, chaque contrat et chaque locataire sur une seule plateforme propulsée par l’IA — conçue pour la gestion immobilière et facility suisse, en allemand, français, italien et anglais.`,
       'nav.menu': 'Menu',
       'nav.platform': 'Plateforme',
       'nav.communication': 'Communication',
@@ -531,10 +535,10 @@ const T10_I18N = {
       'footer.imprint': `Mentions légales`,
     },
     features: {
-      maintenance: { kicker: `Une demande de maintenance`, title: `De la demande à la résolution.`, image: `assets/screenshots/maintenance-request.jpg`, description: `Un locataire signale un problème avec photos depuis l'application mobile. Le personnel voit l'emplacement, le problème et chaque mise à jour dans un seul dossier.`, visualBrief: `Une demande de maintenance et son historique complet`, caption: `Ce que le personnel voit dès qu'une demande arrive.` },
-      property: { kicker: `Un immeuble, en contexte`, title: `De l'immeuble jusqu'au lot.`, image: `assets/screenshots/property-units.jpg`, description: `Chaque étage et chaque lot d'un immeuble, avec les contrats et locataires rattachés.`, visualBrief: `Étages et lots d'un immeuble sélectionné`, caption: `La structure complète d'un immeuble, toujours à jour.` },
-      contracts: { kicker: `Lu par l'IA`, title: `Un contrat, relié automatiquement.`, image: `assets/screenshots/contracts-list.jpg`, description: `Téléversez un bail signé — l'IA de Tenants10 le lit, le relie au bon immeuble, lot et locataire, et saisit automatiquement le loyer, le dépôt et l'échéance de paiement.`, visualBrief: `Un contrat relié à son immeuble, son lot et son locataire`, caption: `Aucune saisie manuelle. Aucun dossier mal associé.` },
-      insights: { kicker: `Votre activité, en un coup d'œil`, title: `Un tableau de bord construit sur ce que vous utilisez.`, image: `assets/screenshots/insights-dashboard.jpg`, description: `Occupation, cas de maintenance ouverts, échéances de conformité et plus — chaque bloc n'apparaît que si ce module est actif pour votre organisation.`, visualBrief: `Un tableau de bord opérateur, basé sur vos modules actifs`, caption: `Ce qu'un facility manager voit en premier, chaque matin.` },
+      maintenance: { kicker: `Une demande de maintenance`, title: `De la demande à la résolution.`, image: `/assets/screenshots/maintenance-request.jpg`, description: `Un locataire signale un problème avec photos depuis l'application mobile. Le personnel voit l'emplacement, le problème et chaque mise à jour dans un seul dossier.`, visualBrief: `Une demande de maintenance et son historique complet`, caption: `Ce que le personnel voit dès qu'une demande arrive.` },
+      property: { kicker: `Un immeuble, en contexte`, title: `De l'immeuble jusqu'au lot.`, image: `/assets/screenshots/property-units.jpg`, description: `Chaque étage et chaque lot d'un immeuble, avec les contrats et locataires rattachés.`, visualBrief: `Étages et lots d'un immeuble sélectionné`, caption: `La structure complète d'un immeuble, toujours à jour.` },
+      contracts: { kicker: `Lu par l'IA`, title: `Un contrat, relié automatiquement.`, image: `/assets/screenshots/contracts-list.jpg`, description: `Téléversez un bail signé — l'IA de Tenants10 le lit, le relie au bon immeuble, lot et locataire, et saisit automatiquement le loyer, le dépôt et l'échéance de paiement.`, visualBrief: `Un contrat relié à son immeuble, son lot et son locataire`, caption: `Aucune saisie manuelle. Aucun dossier mal associé.` },
+      insights: { kicker: `Votre activité, en un coup d'œil`, title: `Un tableau de bord construit sur ce que vous utilisez.`, image: `/assets/screenshots/insights-dashboard.jpg`, description: `Occupation, cas de maintenance ouverts, échéances de conformité et plus — chaque bloc n'apparaît que si ce module est actif pour votre organisation.`, visualBrief: `Un tableau de bord opérateur, basé sur vos modules actifs`, caption: `Ce qu'un facility manager voit en premier, chaque matin.` },
     },
     importSteps: [
       { title: `Commencez avec votre tableur.`, copy: `Références d'immeuble, de lot et de contrat — quelle que soit la manière dont vous les suivez aujourd'hui.`, status: `Import`, symbol: '↑', headers: ['Immeuble', 'Lot', 'Référence'] },
@@ -555,6 +559,8 @@ const T10_I18N = {
 
   it: {
     flat: {
+      'seo.title': `Tenants10 — Gestione immobiliare e facility nativa all’IA per la Svizzera`,
+      'seo.description': `Tenants10 collega ogni edificio, contratto e inquilino in un’unica piattaforma basata sull’IA — pensata per la gestione immobiliare e facility svizzera, in tedesco, francese, italiano e inglese.`,
       'nav.menu': 'Menu',
       'nav.platform': 'Piattaforma',
       'nav.communication': 'Comunicazione',
@@ -713,10 +719,10 @@ const T10_I18N = {
       'footer.imprint': `Note legali`,
     },
     features: {
-      maintenance: { kicker: `Una richiesta di manutenzione`, title: `Dalla segnalazione alla risoluzione.`, image: `assets/screenshots/maintenance-request.jpg`, description: `Un inquilino segnala un problema con foto dall'app mobile. Lo staff vede la posizione, il problema e ogni aggiornamento in un unico record.`, visualBrief: `Una richiesta di manutenzione con la sua storia completa`, caption: `Cosa vede lo staff non appena arriva una richiesta.` },
-      property: { kicker: `Un immobile, nel contesto`, title: `Dall'edificio all'unità.`, image: `assets/screenshots/property-units.jpg`, description: `Ogni piano e unità di un immobile, con i contratti e gli inquilini collegati.`, visualBrief: `Piani e unità di un immobile selezionato`, caption: `La struttura completa di un immobile, sempre aggiornata.` },
-      contracts: { kicker: `Letto dall'IA`, title: `Un contratto, collegato automaticamente.`, image: `assets/screenshots/contracts-list.jpg`, description: `Caricate un contratto di locazione firmato — l'IA di Tenants10 lo legge, lo collega all'immobile, unità e inquilino corretti, e registra automaticamente canone, deposito e scadenza di pagamento.`, visualBrief: `Un contratto collegato al suo immobile, unità e inquilino`, caption: `Nessun inserimento manuale. Nessun record associato male.` },
-      insights: { kicker: `La vostra attività, a colpo d'occhio`, title: `Una dashboard costruita su ciò che utilizzate.`, image: `assets/screenshots/insights-dashboard.jpg`, description: `Occupazione, casi di manutenzione aperti, scadenze di conformità e altro — ogni blocco appare solo se quel modulo è attivo per la vostra organizzazione.`, visualBrief: `Una dashboard operativa, basata sui vostri moduli attivi`, caption: `Ciò che un facility manager vede per primo, ogni mattina.` },
+      maintenance: { kicker: `Una richiesta di manutenzione`, title: `Dalla segnalazione alla risoluzione.`, image: `/assets/screenshots/maintenance-request.jpg`, description: `Un inquilino segnala un problema con foto dall'app mobile. Lo staff vede la posizione, il problema e ogni aggiornamento in un unico record.`, visualBrief: `Una richiesta di manutenzione con la sua storia completa`, caption: `Cosa vede lo staff non appena arriva una richiesta.` },
+      property: { kicker: `Un immobile, nel contesto`, title: `Dall'edificio all'unità.`, image: `/assets/screenshots/property-units.jpg`, description: `Ogni piano e unità di un immobile, con i contratti e gli inquilini collegati.`, visualBrief: `Piani e unità di un immobile selezionato`, caption: `La struttura completa di un immobile, sempre aggiornata.` },
+      contracts: { kicker: `Letto dall'IA`, title: `Un contratto, collegato automaticamente.`, image: `/assets/screenshots/contracts-list.jpg`, description: `Caricate un contratto di locazione firmato — l'IA di Tenants10 lo legge, lo collega all'immobile, unità e inquilino corretti, e registra automaticamente canone, deposito e scadenza di pagamento.`, visualBrief: `Un contratto collegato al suo immobile, unità e inquilino`, caption: `Nessun inserimento manuale. Nessun record associato male.` },
+      insights: { kicker: `La vostra attività, a colpo d'occhio`, title: `Una dashboard costruita su ciò che utilizzate.`, image: `/assets/screenshots/insights-dashboard.jpg`, description: `Occupazione, casi di manutenzione aperti, scadenze di conformità e altro — ogni blocco appare solo se quel modulo è attivo per la vostra organizzazione.`, visualBrief: `Una dashboard operativa, basata sui vostri moduli attivi`, caption: `Ciò che un facility manager vede per primo, ogni mattina.` },
     },
     importSteps: [
       { title: `Iniziate con il vostro foglio di calcolo.`, copy: `Riferimenti di immobile, unità e contratto — comunque li teniate oggi.`, status: `Import`, symbol: '↑', headers: ['Immobile', 'Unità', 'Riferimento'] },
@@ -736,49 +742,6 @@ const T10_I18N = {
   },
 };
 
-window.T10_I18N = T10_I18N;
-window.t10CurrentLang = 'en';
-
-function t10Lang() { return T10_I18N[window.t10CurrentLang] ? window.t10CurrentLang : 'en'; }
-window.t10Lang = t10Lang;
-
-function t10ApplyLang(lang) {
-  if (!T10_I18N[lang]) lang = 'en';
-  window.t10CurrentLang = lang;
-  try { localStorage.setItem('t10_lang', lang); } catch (e) {}
-  document.documentElement.lang = lang;
-  const dict = T10_I18N[lang].flat;
-  document.querySelectorAll('[data-i18n]').forEach((el) => {
-    const key = el.getAttribute('data-i18n');
-    if (dict[key] !== undefined) el.innerHTML = dict[key];
-  });
-  document.querySelectorAll('#lang-switch button').forEach((btn) => {
-    btn.setAttribute('aria-pressed', String(btn.dataset.lang === lang));
-  });
-  document.dispatchEvent(new CustomEvent('t10:langchange', { detail: { lang } }));
+export function t(locale: Locale) {
+  return T10_I18N[locale];
 }
-window.t10ApplyLang = t10ApplyLang;
-
-document.addEventListener('DOMContentLoaded', () => {
-  let initial = 'en';
-  try {
-    // ?lang= wins over everything else -- it's how the old localized
-    // paths (/de, /fr, /it) redirect here (see staticwebapp.config.json),
-    // so a bookmarked or search-indexed link still opens in the right
-    // language instead of silently falling back to English.
-    const fromQuery = new URLSearchParams(location.search).get('lang');
-    const saved = localStorage.getItem('t10_lang');
-    if (fromQuery && T10_I18N[fromQuery]) initial = fromQuery;
-    else if (saved && T10_I18N[saved]) initial = saved;
-    else {
-      const nav = (navigator.language || 'en').slice(0, 2).toLowerCase();
-      if (T10_I18N[nav]) initial = nav;
-    }
-  } catch (e) {}
-
-  document.querySelectorAll('#lang-switch button').forEach((btn) => {
-    btn.addEventListener('click', () => t10ApplyLang(btn.dataset.lang));
-  });
-
-  t10ApplyLang(initial);
-});
