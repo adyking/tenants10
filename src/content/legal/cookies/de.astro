@@ -1,0 +1,24 @@
+---
+interface Props { locale: 'en' | 'de' | 'fr' | 'it' }
+const { locale } = Astro.props;
+const path = (doc: string) => (locale === 'en' ? `/${doc}/` : `/${locale}/${doc}/`);
+---
+<p>Diese Cookie-Richtlinie erläutert, wie Tenants10 KlG („Tenants10", „wir") Cookies und ähnliche Technologien (wie z. B. lokalen Speicher) auf tenants10.com und in der Tenants10-Webanwendung einsetzt und wie Sie diese steuern können. Sie sollte zusammen mit unserer <a href={path('privacy')}>Datenschutzerklärung</a> gelesen werden.</p>
+
+  <h2>1. Was sind Cookies?</h2>
+  <p>Cookies sind kleine Textdateien, die von einer Website auf Ihrem Gerät abgelegt werden. „Ähnliche Technologien" umfassen den lokalen Speicher (local storage) und den Sitzungsspeicher (session storage) des Browsers, die unsere Webanwendung im Sinne dieser Richtlinie in gleicher Weise wie ein Cookie verwendet.</p>
+
+  <h2>2. Kategorien von Cookies, die wir verwenden</h2>
+  <ul>
+    <li><strong>Unbedingt erforderlich (immer aktiv)</strong> — halten Sie angemeldet, merken sich Ihre Sitzung, schützen vor Cross-Site-Request-Forgery und speichern grundlegende Einstellungen wie Ihre gewählte Sprache. Der Dienst kann ohne diese nicht funktionieren, weshalb sie nicht deaktiviert werden können.</li>
+    <li><strong>Funktional</strong> — speichern nicht wesentliche Einstellungen (wie eine eingeklappte Seitenleiste oder eine gewählte Ansicht), um die Nutzung des Dienstes komfortabler zu machen.</li>
+    <li><strong>Analyse (nur Website, soweit aktiviert)</strong> — helfen uns zu verstehen, wie Besucher tenants10.com insgesamt nutzen, damit wir sie verbessern können. Diese werden auf der öffentlichen Website nur mit Ihrer Einwilligung gesetzt.</li>
+  </ul>
+  <p>Wir verwenden keine Werbe-Cookies Dritter oder Cookies zur seitenübergreifenden Verfolgung (Cross-Site-Tracking).</p>
+
+  <h2>3. Ihre Wahlmöglichkeiten</h2>
+  <p>Wenn Sie tenants10.com zum ersten Mal besuchen, können Sie über das Cookie-Banner auswählen, welche nicht wesentlichen Cookie-Kategorien Sie zulassen möchten. Sie können Ihre Wahl jederzeit ändern, indem Sie den Eintrag „tenants10-cookie-consent" in den Website-Daten Ihres Browsers löschen, wodurch das Banner erneut angezeigt wird, oder indem Sie die Cookie-Einstellungen Ihres Browsers selbst anpassen. Das Blockieren unbedingt erforderlicher Cookies verhindert, dass die Website und die App ordnungsgemäss funktionieren, einschliesslich des Aufrechterhaltens Ihrer Anmeldung.</p>
+  <p>Die Tenants10-Webanwendung (workspace.tenants10.com) setzt ausschliesslich die unbedingt erforderlichen Cookies/den lokalen Speicher, die nötig sind, um Sie angemeldet zu halten und Ihre Einstellungen zu speichern — dort werden keine Analyse- oder Werbe-Cookies gesetzt.</p>
+
+  <h2>4. Kontakt</h2>
+  <p>Fragen zu dieser Cookie-Richtlinie? Kontaktieren Sie <a href="mailto:support@tenants10.com">support@tenants10.com</a>.</p>

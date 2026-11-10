@@ -1,0 +1,89 @@
+---
+interface Props { locale: 'en' | 'de' | 'fr' | 'it' }
+const { locale } = Astro.props;
+const path = (doc: string) => (locale === 'en' ? `/${doc}/` : `/${locale}/${doc}/`);
+---
+<h2>1. Wer wir sind</h2>
+  <p>Diese Datenschutzerklärung wird von Tenants10 KlG, Grütstrasse 28, 8134 Adliswil, Switzerland (UID CHE-431.347.772) („Tenants10", „wir", „uns", „unser") herausgegeben, dem Verantwortlichen für die Website, die Webanwendung und die mobilen Anwendungen von Tenants10 (zusammen der „Dienst"), ausser wenn in Abschnitt 3 unten etwas anderes angegeben ist.</p>
+  <p>Diese Erklärung wurde verfasst, um dem schweizerischen Bundesgesetz über den Datenschutz (FADP, Bundesgesetz über den Datenschutz, DSG, in revidierter Fassung, in Kraft seit 1. September 2023) zu entsprechen. Befindet sich ein Nutzer oder Mieter im Europäischen Wirtschaftsraum, gelten zusätzlich die massgeblichen Bestimmungen der EU-Datenschutz-Grundverordnung (DSGVO).</p>
+
+  <h2>2. Wer von dieser Erklärung erfasst wird</h2>
+  <p>Der Dienst wird von drei Arten von Personen genutzt, und diese Erklärung gilt für alle von ihnen:</p>
+  <ul>
+    <li>Mitarbeitende Nutzer — Angestellte von Immobilienverwaltungen, Facility-Betreibern, Dienstleistern und anderen Geschäftskunden, die ein Konto auf der Plattform führen.</li>
+    <li>Bewohner/Mieter — Personen, die in einem über den Dienst verwalteten Gebäude leben oder dieses nutzen (über das Bewohnerportal oder die mobile App), eingeladen von einem unserer Geschäftskunden.</li>
+    <li>Besucher — Personen, die tenants10.com ohne Konto besuchen.</li>
+  </ul>
+
+  <h2>3. Unsere Rolle: Verantwortlicher vs. Auftragsverarbeiter</h2>
+  <p>Für die eigenen Kontodaten eines mitarbeitenden Nutzers (Anmeldung, Profil, Rolle, Nutzung der Plattform) und für Besucher unserer Website ist Tenants10 der Verantwortliche.</p>
+  <p>Für Bewohner-/Mieterdaten, die von einem unserer Geschäftskunden (einer Agentur, einem Vermieter oder einem Facility-Betreiber) in die Plattform eingegeben werden — Namen, Kontaktdaten, Mietvertrags- und Zahlungsdatensätze, Instandhaltungsanfragen, Nachrichten, Dokumente und Ähnliches — ist unser Geschäftskunde der Verantwortliche, und Tenants10 handelt als dessen Auftragsverarbeiter, der diese Daten nur gemäss den dokumentierten Anweisungen des Kunden und im Rahmen einer Vereinbarung zur Datenverarbeitung bearbeitet (siehe Abschnitt 11). Wenn Sie Bewohner/Mieter sind und eine Frage zu Ihren Daten haben, wenden Sie sich bitte an die Immobilienverwaltung oder Organisation, die Sie zur Plattform eingeladen hat; diese ist für die Beantwortung Ihrer Anfrage verantwortlich, und wir unterstützen sie dabei.</p>
+
+  <h2>4. Informationen, die wir erheben</h2>
+  <ul>
+    <li><strong>Konto- &amp; Identitätsdaten:</strong> Name, E-Mail, Telefonnummer, Rolle, Unternehmen, Sprachpräferenz, Profilbild.</li>
+    <li><strong>Immobilien- &amp; Mietdaten:</strong> Gebäude-, Einheiten- und Mietvertragsinformationen; Miet- und Zahlungsdatensätze; Kautionsinformationen; Instandhaltungs- und Arbeitsauftragsanfragen; Inspektions- und Compliance-Datensätze.</li>
+    <li><strong>Dokumente:</strong> Verträge, Grundrisse, Rechnungen, Fotos und andere Dateien, die Sie oder Ihre Organisation hochladen und die in unserem Dokumentenspeicher abgelegt werden.</li>
+    <li><strong>Kommunikation:</strong> über den In-App-Chat gesendete Nachrichten, Support-Tickets und Ankündigungen, einschliesslich deren Inhalt.</li>
+    <li><strong>Geräte- &amp; Nutzungsdaten:</strong> IP-Adresse, Browser-/Gerätetyp, App-Version, Push-Benachrichtigungs-Token, Anmeldezeiten und allgemeine Nutzungs-/Diagnosedaten.</li>
+    <li><strong>Zahlungsdaten:</strong> Soweit die Abrechnung verarbeitet wird, werden Zahlungsmitteldaten direkt von unserem Zahlungsdienstleister (Stripe) erhoben und gespeichert — Tenants10 speichert keine vollständigen Kartennummern.</li>
+  </ul>
+
+  <h2>5. Wie wir Ihre Informationen verwenden</h2>
+  <ul>
+    <li>Bereitstellung, Betrieb und Unterhalt des Dienstes, einschliesslich des Bewohnerportals und der mobilen Apps.</li>
+    <li>Verarbeitung von Mietzahlungen, Instandhaltungsanfragen, Buchungen und Support-Anfragen.</li>
+    <li>Versand von Konto-, Gebäude- und Dienstbenachrichtigungen (in der App, per E-Mail und per Push).</li>
+    <li>Einsatz von KI (einschliesslich Microsoft Azure OpenAI Service), um Informationen aus hochgeladenen Dokumenten zu extrahieren und zu organisieren und um In-App-KI-Assistenten zu betreiben — siehe Abschnitt 6.</li>
+    <li>Automatische Übersetzung von Nachrichten und Mitteilungen zwischen Nutzern, die in unterschiedlichen Sprachen schreiben (über Microsoft Azure Translator).</li>
+    <li>Aufrechterhaltung der Plattformsicherheit, Erkennung von Missbrauch und Führung eines Prüfprotokolls der Kontoaktivitäten.</li>
+    <li>Erfüllung gesetzlicher Pflichten, Durchsetzung unserer Nutzungsbedingungen und Schutz der Rechte und der Sicherheit unserer Nutzer.</li>
+    <li>Verbesserung der Leistung und Zuverlässigkeit des Dienstes.</li>
+  </ul>
+  <p>Wir verwenden personenbezogene Daten nicht für automatisierte Entscheidungen, die rechtliche oder ähnlich bedeutsame Wirkungen entfalten, und wir verkaufen keine personenbezogenen Daten.</p>
+
+  <h2>6. KI-Funktionen</h2>
+  <p>Bestimmte Funktionen (wie die Dokumentendatenextraktion und KI-Assistenten) senden den jeweiligen Dokument- oder Nachrichteninhalt zur Verarbeitung an den Microsoft Azure OpenAI Service. Dies erfolgt im Rahmen der Enterprise-Datenverarbeitungsbedingungen von Microsoft, die vorsehen, dass über Azure OpenAI übermittelte Prompts und Ausgaben nicht zum Training der zugrunde liegenden Modelle von Microsoft oder OpenAI verwendet werden. Von der KI erzeugte Vorschläge sollten von einem Menschen überprüft werden, bevor sie für rechtliche, finanzielle oder sicherheitskritische Entscheidungen herangezogen werden.</p>
+
+  <h2>7. Mit wem wir Informationen teilen</h2>
+  <p>Wir verkaufen keine personenbezogenen Daten. Wir geben sie nur weiter, soweit dies für den Betrieb des Dienstes erforderlich ist:</p>
+  <ul>
+    <li><strong>Innerhalb Ihrer Organisation:</strong> Mitarbeitende Nutzer sehen Bewohner-/Mieterdaten gemäss den Berechtigungen, die ihnen ihre Organisation zuweist.</li>
+    <li><strong>Unterauftragsverarbeiter</strong> (aufgeführt in Abschnitt 8), die Daten hosten, Benachrichtigungen versenden, Zahlungen verarbeiten oder KI-/Übersetzungsfunktionen im Auftrag von Tenants10 bereitstellen, im Rahmen schriftlicher Vereinbarungen zur Datenverarbeitung.</li>
+    <li><strong>Behörden,</strong> soweit dies nach schweizerischem Recht, einem gültigen Rechtsverfahren erforderlich ist oder dem Schutz der Rechte, des Eigentums oder der Sicherheit von Tenants10, unseren Nutzern oder der Öffentlichkeit dient.</li>
+    <li><strong>Eine Rechtsnachfolgerin,</strong> im Falle einer Fusion, Übernahme oder eines Verkaufs von Vermögenswerten, vorbehaltlich derselben hier beschriebenen datenschutzrechtlichen Verpflichtungen.</li>
+  </ul>
+
+  <h2>8. Unterauftragsverarbeiter &amp; internationale Übermittlungen</h2>
+  <p>Unsere primäre Infrastruktur (Anwendungsserver, Datenbank und Dateispeicher) wird von Microsoft Azure in der Region Switzerland North betrieben, sodass die Kerndaten der Plattform in der Schweiz gespeichert werden. Einige Funktionen stützen sich auf Unterauftragsverarbeiter, die Daten ausserhalb der Schweiz verarbeiten können, insbesondere in den Vereinigten Staaten:</p>
+  <ul>
+    <li>Microsoft Azure (Switzerland North, wobei einige KI-/Übersetzungsabfragen über regionale Endpunkte von Azure geleitet werden) — Hosting, Datenbank, Dateispeicherung, KI-gestützte Dokumentenextraktion, Übersetzung.</li>
+    <li>Google Firebase Cloud Messaging (Vereinigte Staaten) — Zustellung von mobilen und browserbasierten Push-Benachrichtigungen. Push-Inhalte sind bewusst generisch gehalten (nur ein Kategorielabel — z. B. „Neue Nachricht" — niemals Namen, Nachrichteninhalte oder Beträge), gerade weil dieser Kanal unsere eigene Infrastruktur verlässt.</li>
+    <li>Resend — Zustellung transaktionaler E-Mails (Konto-, Benachrichtigungs- und Passwort-Reset-E-Mails).</li>
+    <li>Stripe — Zahlungsabwicklung für Plattform-Abonnements, soweit zutreffend.</li>
+  </ul>
+  <p>Werden personenbezogene Daten in ein Land ausserhalb der Schweiz oder des EWR übermittelt, das kein anerkannt angemessenes Datenschutzniveau bietet, stützen wir uns als rechtliche Garantie für diese Übermittlung auf die Standardvertragsklauseln der Anbieter und, soweit anwendbar, auf das EU-US- bzw. Swiss-US Data Privacy Framework.</p>
+
+  <h2>9. Datenspeicherung</h2>
+  <p>Wir speichern personenbezogene Daten so lange, wie das zugehörige Konto oder die zugehörige Organisation auf dem Dienst aktiv ist, und danach für einen angemessenen Zeitraum, um gesetzlichen, buchhalterischen und streitbeilegungsbezogenen Pflichten zu entsprechen — in der Regel bis zu 10 Jahre für Finanz- und Vertragsunterlagen, im Einklang mit den schweizerischen Aufbewahrungspflichten (Art. 958f OR). Schliesst eine Organisation ihr Konto, löschen oder anonymisieren wir die personenbezogenen Daten von Bewohnern/Mietern innerhalb einer angemessenen Frist, ausser eine längere Aufbewahrung ist gesetzlich vorgeschrieben oder mit dieser Organisation im Rahmen der Vereinbarung zur Datenverarbeitung vereinbart.</p>
+
+  <h2>10. Cookies &amp; ähnliche Technologien</h2>
+  <p>Unsere Website und Webanwendung verwenden Cookies und ähnlichen lokalen Speicher für wesentliche Funktionen (Aufrechterhaltung Ihrer Anmeldung, Speicherung von Einstellungen) und, soweit aktiviert, für Analysezwecke. Siehe unsere <a href={path('cookies')}>Cookie-Richtlinie</a> für die vollständige Liste und wie Sie Ihre Wahlmöglichkeiten verwalten können.</p>
+
+  <h2>11. Vereinbarung zur Datenverarbeitung (Geschäftskunden)</h2>
+  <p>Wenn Sie ein Geschäftskunde (eine Agentur, ein Vermieter oder ein Facility-Betreiber) sind, der personenbezogene Daten seiner Bewohner/Mieter über den Dienst verarbeitet, ist unsere <a href={path('dpa')}>Vereinbarung zur Datenverarbeitung</a> Bestandteil Ihres Vertrags mit uns und legt den Umfang, den Zweck, die Unterauftragsverarbeiter und die Sicherheitsmassnahmen fest, die für diese Verarbeitung gelten, wie dies nach Art. 9 FADP erforderlich ist.</p>
+
+  <h2>12. Datensicherheit</h2>
+  <p>Wir setzen technische und organisatorische Massnahmen ein, die der Sensibilität der Daten angemessen sind, einschliesslich Verschlüsselung während der Übertragung, rollenbasierter Zugriffskontrolle, Audit-Protokollierung und regelmässiger Überprüfung der Unterauftragsverarbeiter Dritter. Keine Methode der Übertragung oder Speicherung ist vollständig sicher, und wir können absolute Sicherheit nicht garantieren.</p>
+
+  <h2>13. Ihre Rechte</h2>
+  <p>Nach dem FADP (und, soweit anwendbar, der DSGVO) haben Sie das Recht, Zugang zu den über Sie gespeicherten personenbezogenen Daten, deren Korrektur, Löschung oder Einschränkung zu verlangen, und bestimmten Verarbeitungen zu widersprechen. Wurden Ihre Daten uns von Ihrer Immobilienverwaltung oder Ihrem Arbeitgeber übermittelt (siehe Abschnitt 3), richten Sie Ihre Anfrage bitte zunächst an diese; wir unterstützen sie bei der Beantwortung. Sie können zudem eine Beschwerde beim Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB), Feldeggweg 1, 3003 Bern, Switzerland (edoeb.admin.ch), einreichen oder, falls die DSGVO auf Sie anwendbar ist, bei Ihrer örtlichen EU-Datenschutzbehörde.</p>
+
+  <h2>14. Kinder</h2>
+  <p>Der Dienst ist für die geschäftliche Nutzung und für erwachsene Bewohner/Mieter bestimmt. Wir erheben wissentlich keine personenbezogenen Daten von Kindern.</p>
+
+  <h2>15. Änderungen dieser Erklärung</h2>
+  <p>Wir können diese Erklärung von Zeit zu Zeit aktualisieren. Wesentliche Änderungen werden in der App oder per E-Mail an Kontoinhaber angekündigt, und das oben genannte Datum „Zuletzt aktualisiert" wird entsprechend angepasst.</p>
+
+  <h2>16. Kontakt</h2>
+  <p>Fragen zu dieser Datenschutzerklärung oder zur Ausübung Ihrer Rechte richten Sie bitte an: <a href="mailto:support@tenants10.com">support@tenants10.com</a>, oder postalisch an Tenants10 KlG, Grütstrasse 28, 8134 Adliswil, Switzerland.</p>

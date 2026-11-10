@@ -1,0 +1,24 @@
+---
+interface Props { locale: 'en' | 'de' | 'fr' | 'it' }
+const { locale } = Astro.props;
+const path = (doc: string) => (locale === 'en' ? `/${doc}/` : `/${locale}/${doc}/`);
+---
+<p>La présente Politique de cookies explique comment Tenants10 KlG (« Tenants10 », « nous ») utilise des cookies et des technologies similaires (telles que le stockage local) sur tenants10.com et dans l'application web Tenants10, ainsi que la manière dont vous pouvez les contrôler. Elle doit être lue conjointement avec notre <a href={path('privacy')}>Politique de confidentialité</a>.</p>
+
+  <h2>1. Que sont les cookies ?</h2>
+  <p>Les cookies sont de petits fichiers texte placés sur votre appareil par un site web. Les « technologies similaires » comprennent le stockage local (local storage) et le stockage de session (session storage) du navigateur, que notre application web utilise de la même manière qu'un cookie aux fins de la présente Politique.</p>
+
+  <h2>2. Catégories de cookies que nous utilisons</h2>
+  <ul>
+    <li><strong>Strictement nécessaires (toujours actifs)</strong> — vous maintiennent connecté, mémorisent votre session, protègent contre la falsification de requête intersite (CSRF) et mémorisent des préférences de base telles que la langue sélectionnée. Le Service ne peut fonctionner sans ces cookies, qui ne peuvent donc pas être désactivés.</li>
+    <li><strong>Fonctionnels</strong> — mémorisent des préférences non essentielles (telles qu'une barre latérale réduite ou une vue choisie) afin de rendre l'utilisation du Service plus pratique.</li>
+    <li><strong>Analytiques (site web uniquement, lorsqu'activés)</strong> — nous aident à comprendre, de manière agrégée, comment les visiteurs utilisent tenants10.com, afin que nous puissions l'améliorer. Ils ne sont déposés qu'avec votre consentement sur le site public.</li>
+  </ul>
+  <p>Nous n'utilisons pas de cookies publicitaires tiers ni de cookies de suivi intersite.</p>
+
+  <h2>3. Vos choix</h2>
+  <p>Lors de votre première visite sur tenants10.com, vous pouvez choisir les catégories de cookies non essentielles à autoriser via la bannière de cookies. Vous pouvez modifier votre choix à tout moment en supprimant l'entrée « tenants10-cookie-consent » des données de site de votre navigateur, ce qui affichera à nouveau la bannière, ou en ajustant les paramètres de cookies de votre propre navigateur. Le blocage des cookies strictement nécessaires empêchera le site web et l'application de fonctionner correctement, y compris le maintien de votre connexion.</p>
+  <p>L'application web Tenants10 (workspace.tenants10.com) ne dépose que les cookies/le stockage local strictement nécessaires pour vous maintenir connecté et mémoriser vos paramètres — aucun cookie analytique ou publicitaire n'y est déposé.</p>
+
+  <h2>4. Contact</h2>
+  <p>Des questions sur la présente Politique de cookies ? Contactez <a href="mailto:support@tenants10.com">support@tenants10.com</a>.</p>

@@ -1,0 +1,24 @@
+---
+interface Props { locale: 'en' | 'de' | 'fr' | 'it' }
+const { locale } = Astro.props;
+const path = (doc: string) => (locale === 'en' ? `/${doc}/` : `/${locale}/${doc}/`);
+---
+<p>La presente Cookie Policy illustra in che modo Tenants10 KlG ("Tenants10", "noi") utilizza cookie e tecnologie simili (quali il local storage) su tenants10.com e nell'applicazione web Tenants10, e come può controllarli. Deve essere letta insieme alla nostra <a href={path('privacy')}>Informativa sulla privacy</a>.</p>
+
+  <h2>1. Cosa sono i cookie?</h2>
+  <p>I cookie sono piccoli file di testo depositati sul Suo dispositivo da un sito web. Le "tecnologie simili" comprendono il local storage e il session storage del browser, che la nostra applicazione web utilizza, ai fini della presente Policy, allo stesso modo di un cookie.</p>
+
+  <h2>2. Categorie di cookie che utilizziamo</h2>
+  <ul>
+    <li><strong>Strettamente necessari (sempre attivi)</strong> — Le consentono di rimanere collegato, memorizzano la Sua sessione, proteggono dal cross-site request forgery e memorizzano preferenze di base come la lingua selezionata. Il Servizio non può funzionare senza di essi, pertanto non possono essere disattivati.</li>
+    <li><strong>Funzionali</strong> — memorizzano preferenze non essenziali (come una barra laterale compressa o una vista scelta) per rendere l'uso del Servizio più comodo.</li>
+    <li><strong>Analitici (solo sito web, se attivati)</strong> — ci aiutano a comprendere, in forma aggregata, come i visitatori utilizzano tenants10.com, così da poterlo migliorare. Vengono impostati sul sito pubblico solo con il Suo consenso.</li>
+  </ul>
+  <p>Non utilizziamo cookie pubblicitari di terze parti né cookie di tracciamento cross-site.</p>
+
+  <h2>3. Le Sue scelte</h2>
+  <p>Alla prima visita di tenants10.com, può scegliere quali categorie di cookie non essenziali consentire tramite il banner dei cookie. Può modificare la Sua scelta in qualsiasi momento eliminando la voce "tenants10-cookie-consent" dai dati del sito nel Suo browser, il che farà riapparire il banner, oppure modificando le impostazioni dei cookie del Suo browser. Il blocco dei cookie strettamente necessari impedirà al sito web e all'app di funzionare correttamente, incluso il mantenimento dell'accesso.</p>
+  <p>L'applicazione web Tenants10 (workspace.tenants10.com) imposta solo i cookie/il local storage strettamente necessari per mantenerLa collegato e memorizzare le Sue impostazioni — non vengono impostati cookie analitici o pubblicitari.</p>
+
+  <h2>4. Contatti</h2>
+  <p>Domande sulla presente Cookie Policy? Contatti <a href="mailto:support@tenants10.com">support@tenants10.com</a>.</p>

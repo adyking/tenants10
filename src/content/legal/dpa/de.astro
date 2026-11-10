@@ -1,0 +1,42 @@
+---
+interface Props { locale: 'en' | 'de' | 'fr' | 'it' }
+const { locale } = Astro.props;
+const path = (doc: string) => (locale === 'en' ? `/${doc}/` : `/${locale}/${doc}/`);
+---
+<p>Diese Vereinbarung zur Datenverarbeitung („DPA") ergänzt die <a href={path('terms')}>Nutzungsbedingungen</a> von Tenants10 und gilt automatisch, wenn Sie („Kunde") den Dienst von Tenants10 nutzen, um personenbezogene Daten Ihrer eigenen Bewohner, Mieter, Mitarbeiter oder anderer Personen („Bewohnerdaten") auf der Plattform von Tenants10 zu verarbeiten. Sie soll den Anforderungen von Art. 9 des Schweizer Bundesgesetzes über den Datenschutz (FADP, Bundesgesetz über den Datenschutz, DSG) und, soweit anwendbar, Art. 28 DSGVO entsprechen.</p>
+
+  <h2>1. Rollen</h2>
+  <p>Der Kunde ist der Verantwortliche für die Bewohnerdaten. Tenants10 KlG ist der Auftragsverarbeiter und handelt ausschliesslich auf dokumentierte Anweisung des Kunden, wie diese durch die normale Konfiguration und Nutzung des Dienstes erteilt wird (z. B. welche Module aktiviert sind, wen der Kunde einlädt, welche Daten der Kunde eingibt).</p>
+
+  <h2>2. Gegenstand, Art &amp; Zweck</h2>
+  <p>Tenants10 verarbeitet Bewohnerdaten, um die vom Kunden konfigurierten Immobilien-/Facility-Management-Funktionen bereitzustellen: Miet- und Mietvertragsverwaltung, Verfolgung von Mieten und Zahlungen, Verwaltung von Instandhaltungs- und Arbeitsaufträgen, Compliance-/Inspektionsverfolgung, In-App-Messaging, Dokumentenspeicherung und damit verbundene KI-gestützte Funktionen (Dokumentenextraktion, Übersetzung und In-App-Assistenten), für die Dauer des Abonnements des Kunden.</p>
+
+  <h2>3. Kategorien von Daten &amp; betroffenen Personen</h2>
+  <p>Bewohnerdaten können Folgendes umfassen: Name, Kontaktdaten, Miet- und Zahlungsdatensätze, Instandhaltungsanfragen, Nachrichten und Dokumente in Bezug auf die Mieter, Bewohner und Gebäudekontakte des Kunden. Sie umfassen keine besonderen Kategorien personenbezogener Daten (z. B. Gesundheitsdaten), sofern der Kunde sich nicht entscheidet, solche Inhalte hochzuladen, wofür der Kunde zusichert, über eine rechtmässige Grundlage zu verfügen.</p>
+
+  <h2>4. Unterauftragsverarbeiter</h2>
+  <p>Der Kunde ermächtigt Tenants10, die in Abschnitt 8 der <a href={path('privacy')}>Datenschutzerklärung</a> aufgeführten Unterauftragsverarbeiter (wie von Zeit zu Zeit aktualisiert) zur Erbringung des Dienstes einzusetzen. Tenants10 bleibt für die Einhaltung von Datenschutzpflichten durch jeden Unterauftragsverarbeiter verantwortlich, die den in dieser DPA enthaltenen Pflichten gleichwertig sind, und wird den Kunden angemessen über jeden neuen Unterauftragsverarbeiter informieren, der Bewohnerdaten verarbeitet, sodass der Kunde aus vertretbaren datenschutzrechtlichen Gründen widersprechen kann.</p>
+
+  <h2>5. Sicherheitsmassnahmen</h2>
+  <p>Tenants10 unterhält technische und organisatorische Massnahmen, die dem Risiko angemessen sind, einschliesslich: Verschlüsselung von Daten während der Übertragung; rollenbasierter und gebäudebezogener Zugriffskontrolle innerhalb der Plattform; Audit-Protokollierung administrativer Aktionen; Hosting der Kerninfrastruktur in der Region Switzerland North von Microsoft Azure; und regelmässiger Überprüfung der Sicherheitspraktiken der Unterauftragsverarbeiter.</p>
+
+  <h2>6. Vertraulichkeit</h2>
+  <p>Tenants10 stellt sicher, dass Personen, die zur Verarbeitung von Bewohnerdaten befugt sind, einer angemessenen Vertraulichkeitspflicht unterliegen.</p>
+
+  <h2>7. Unterstützung des Kunden</h2>
+  <p>Unter Berücksichtigung der Art der Verarbeitung unterstützt Tenants10 den Kunden in angemessener Weise bei der Beantwortung von Anfragen betroffener Personen (Zugriff, Korrektur, Löschung, Export), die von den eigenen Bewohnern/Mietern des Kunden gestellt werden, sowie bei der Erfüllung allfälliger anwendbarer Datenschutz-Folgenabschätzungs- oder Meldepflichten im Zusammenhang mit Bewohnerdaten, soweit die erforderlichen Informationen Tenants10 vorliegen.</p>
+
+  <h2>8. Meldung von Verletzungen des Schutzes personenbezogener Daten</h2>
+  <p>Tenants10 wird den Kunden ohne unangemessene Verzögerung benachrichtigen, nachdem Tenants10 von einer Verletzung des Schutzes der Bewohnerdaten dieses Kunden Kenntnis erlangt hat, und wird verfügbare Informationen bereitstellen, um dem Kunden bei der Erfüllung seiner eigenen Meldepflichten zu helfen.</p>
+
+  <h2>9. Rückgabe &amp; Löschung von Daten</h2>
+  <p>Nach Beendigung des Abonnements des Kunden stellt Tenants10 die Bewohnerdaten für einen angemessenen Zeitraum zum Export zur Verfügung und löscht oder anonymisiert sie anschliessend, ausser wenn Tenants10 nach anwendbarem Recht (wie etwa den schweizerischen Vorschriften zur Aufbewahrung von Finanzunterlagen) verpflichtet ist, bestimmte Unterlagen länger aufzubewahren.</p>
+
+  <h2>10. Internationale Datenübermittlungen</h2>
+  <p>Werden Bewohnerdaten durch einen in Abschnitt 8 der Datenschutzerklärung aufgeführten Unterauftragsverarbeiter ausserhalb der Schweiz oder des EWR übermittelt, erfolgt diese Übermittlung auf der Grundlage von Standardvertragsklauseln und/oder des EU-US- bzw. Swiss-US Data Privacy Framework, soweit auf diesen Anbieter anwendbar.</p>
+
+  <h2>11. Audit</h2>
+  <p>Auf angemessenes schriftliches Ersuchen und nicht häufiger als einmal jährlich, ausser bei einem konkreten Vorfall, stellt Tenants10 dem Kunden verfügbare Informationen zur Verfügung, die die Einhaltung dieser DPA belegen, wie etwa eine Zusammenfassung der Sicherheitsmassnahmen oder relevante Zertifizierungen der Unterauftragsverarbeiter.</p>
+
+  <h2>12. Vorrang &amp; Kontakt</h2>
+  <p>Im Falle eines Widerspruchs zwischen dieser DPA und den Nutzungsbedingungen hinsichtlich der Verarbeitung von Bewohnerdaten geht diese DPA vor. Für eine unterzeichnete/gegengezeichnete Version dieser DPA für Ihre eigenen Unterlagen oder bei Fragen zu einem bestimmten Engagement (etwa bei einem grösseren Facility-Management-Kunden mit eigener Datenschutzstelle) kontaktieren Sie <a href="mailto:support@tenants10.com">support@tenants10.com</a>.</p>
