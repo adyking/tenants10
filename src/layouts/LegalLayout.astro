@@ -1,0 +1,61 @@
+---
+import SiteHeader from '../components/SiteHeader.astro';
+import type { Locale } from '../i18n/data';
+import type { LegalDocKey } from '../i18n/legalMeta';
+import { LEGAL_META } from '../i18n/legalMeta';
+import { SITE_URL, OG_LOCALE, legalPath, hreflangLinks } from '../lib/seo';
+
+interface Props {
+  locale: Locale;
+  docKey: LegalDocKey;
+  lastUpdated?: string;
+}
+const { locale, docKey, lastUpdated } = Astro.props;
+const meta = LEGAL_META[locale];
+const docMeta = meta.docs[docKey];
+
+const title = `${docMeta.title} — Tenants10`;
+const canonicalUrl = new URL(legalPath(locale, docKey), SITE_URL).toString();
+const alt = hreflangLinks((l) => legalPath(l, docKey));
+const ogImage = new URL('/assets/og-image.jpg', SITE_URL).toString();
+const htmlLang = locale === 'en' ? 'en-GB' : locale;
+
+const langLinks: Record<Locale, string> = {
+  en: legalPath('en', docKey),
+  de: legalPath('de', docKey),
+  fr: legalPath('fr', docKey),
+  it: legalPath('it', docKey),
+};
+---
+<!doctype html>
+<html lang={htmlLang}>
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content={docMeta.description}>
+  <title>{title}</title>
+  <link rel="canonical" href={canonicalUrl}>
+  {alt.map((l) => <link rel="alternate" hreflang={l.hreflang} href={l.href} />)}
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tenants10">
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={docMeta.description}>
+  <meta property="og:image" content={ogImage}>
+  <meta property="og:url" content={canonicalUrl}>
+  <meta property="og:locale" content={OG_LOCALE[locale]}>
+  <link rel="stylesheet" href="/styles.css?v=21">
+  <link rel="stylesheet" href="/legal.css">
+  <script src="/app.js?v=6" defer></script>
+</head>
+<body>
+  <SiteHeader locale={locale} langLinks={langLinks} />
+  <main class="legal-main">
+    <a class="legal-back" href={locale === 'en' ? '/' : `/${locale}/`}>{meta.backLink}</a>
+    <h1>{docMeta.title}</h1>
+    {lastUpdated && <p class="legal-updated">{meta.lastUpdatedLabel} {lastUpdated}</p>}
+    <slot />
+  </main>
+</body>
+</html>

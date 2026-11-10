@@ -1,6 +1,8 @@
 ---
 import type { Locale } from '../i18n/data';
 import { t } from '../i18n/data';
+import SiteHeader from './SiteHeader.astro';
+import { legalPath } from '../lib/seo';
 
 interface Props {
   locale: Locale;
@@ -11,18 +13,7 @@ const d = t(locale);
 
 <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol><symbol id="diagonal" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol><symbol id="play" viewBox="0 0 24 24"><path d="m9 5 10 7-10 7Z"/></symbol><symbol id="check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol><symbol id="plus" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></symbol><symbol id="faq-chevron-icon" viewBox="0 0 16 16"><path d="m3.5 6.25 4.5 4.5 4.5-4.5"/></symbol></svg>
 <a href="#main" class="skip-link">Skip to content</a>
-<header class="header">
-  <div class="shell header-inner">
-    <a href="#top" class="brand header-brand" aria-label="Tenants10 AI Suite home"><img src="/assets/tenants10-logo.svg" width="1022" height="238" alt=""></a>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="navigation"><span set:html={d.flat['nav.menu']}></span> <span class="hamburger-icon" aria-hidden="true"><span></span><span></span><span></span></span></button>
-    <nav id="navigation" aria-label="Main navigation"><span class="nav-lens" aria-hidden="true"></span><a href="#platform"><span set:html={d.flat['nav.platform']}></span></a><a href="#communication"><span set:html={d.flat['nav.communication']}></span></a><a href="#adoption"><span set:html={d.flat['nav.adoption']}></span></a><a href="#questions"><span set:html={d.flat['nav.faq']}></span></a>
-      <div class="lang-switch" id="lang-switch" role="group" aria-label="Choose language">
-        <a href="/" aria-current={locale === 'en' ? 'page' : undefined}>EN</a><a href="/de/" aria-current={locale === 'de' ? 'page' : undefined}>DE</a><a href="/fr/" aria-current={locale === 'fr' ? 'page' : undefined}>FR</a><a href="/it/" aria-current={locale === 'it' ? 'page' : undefined}>IT</a>
-      </div>
-    </nav>
-    <a class="button button-small header-cta" href="#demo"><span set:html={d.flat['nav.cta']}></span> <svg><use href="#diagonal"/></svg></a>
-  </div>
-</header>
+<SiteHeader locale={locale} />
 <main id="main">
 <script is:inline type="application/json" id="t10-data" set:html={JSON.stringify({ features: d.features, importSteps: d.importSteps, ai: d.ai, importLabels: d.importLabels, formStatus: d.formStatus, flat: d.flat })}></script>
   <section class="hero" id="top" aria-labelledby="hero-title">
@@ -192,11 +183,11 @@ const d = t(locale);
     <a href="#top" class="back-top"><span set:html={d.flat['footer.backTop']}></span> ↑</a>
   </div>
   <div class="shell footer-legal">
-    <a  href="/privacy.html" set:html={d.flat['footer.privacy']}></a>
-    <a  href="/terms.html" set:html={d.flat['footer.terms']}></a>
-    <a  href="/cookies.html" set:html={d.flat['footer.cookies']}></a>
-    <a  href="/dpa.html" set:html={d.flat['footer.dpa']}></a>
-    <a  href="/imprint.html" set:html={d.flat['footer.imprint']}></a>
+    <a  href={legalPath(locale, 'privacy')} set:html={d.flat['footer.privacy']}></a>
+    <a  href={legalPath(locale, 'terms')} set:html={d.flat['footer.terms']}></a>
+    <a  href={legalPath(locale, 'cookies')} set:html={d.flat['footer.cookies']}></a>
+    <a  href={legalPath(locale, 'dpa')} set:html={d.flat['footer.dpa']}></a>
+    <a  href={legalPath(locale, 'imprint')} set:html={d.flat['footer.imprint']}></a>
   </div>
   <div class="shell footer-bottom">
     <span class="footer-language">English · Deutsch · Français · Italiano</span>

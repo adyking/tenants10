@@ -1,3 +1,9 @@
 {
-  "routes": []
+  "routes": [
+    { "route": "/terms.html", "redirect": "/terms/", "statusCode": 301 },
+    { "route": "/privacy.html", "redirect": "/privacy/", "statusCode": 301 },
+    { "route": "/cookies.html", "redirect": "/cookies/", "statusCode": 301 },
+    { "route": "/dpa.html", "redirect": "/dpa/", "statusCode": 301 },
+    { "route": "/imprint.html", "redirect": "/imprint/", "statusCode": 301 }
+  ]
 }

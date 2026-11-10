@@ -1,24 +1,9 @@
-<!doctype html>
-<html lang="en-GB">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Tenants10 Data Processing Agreement.">
-<title>Data Processing Agreement — Tenants10</title>
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="stylesheet" href="styles.css?v=21"><link rel="stylesheet" href="legal.css">
-</head>
-<body>
-<header class="header legal-header">
-  <div class="shell header-inner"><a href="index.html" class="brand header-brand" aria-label="Tenants10 AI Suite home"><img src="assets/tenants10-logo.svg" width="1022" height="238" alt=""></a></div>
-</header>
-<main class="legal-main">
-  <a class="legal-back" href="index.html">← Back to Tenants10</a>
-  <h1>Data Processing Agreement</h1>
-  <p class="legal-updated">Last updated: October 4, 2026</p>
-
-  <p>This Data Processing Agreement ("DPA") supplements the Tenants10 <a href="terms.html">Terms of Service</a> and applies automatically whenever you ("Customer") use the Tenants10 Service to process personal data of your own occupants, tenants, staff, or other individuals ("Occupant Data") on Tenants10's platform. It is intended to meet the requirements of Art. 9 of the Swiss Federal Act on Data Protection and, where applicable, Art. 28 GDPR.</p>
+---
+interface Props { locale: 'en' | 'de' | 'fr' | 'it' }
+const { locale } = Astro.props;
+const path = (doc: string) => (locale === 'en' ? `/${doc}/` : `/${locale}/${doc}/`);
+---
+<p>This Data Processing Agreement ("DPA") supplements the Tenants10 <a href={path('terms')}>Terms of Service</a> and applies automatically whenever you ("Customer") use the Tenants10 Service to process personal data of your own occupants, tenants, staff, or other individuals ("Occupant Data") on Tenants10's platform. It is intended to meet the requirements of Art. 9 of the Swiss Federal Act on Data Protection and, where applicable, Art. 28 GDPR.</p>
 
   <h2>1. Roles</h2>
   <p>The Customer is the controller of Occupant Data. Tenants10 KlG is the processor, acting only on the Customer's documented instructions as given through the Service's normal configuration and use (e.g. which modules are enabled, who the Customer invites, what data the Customer enters).</p>
@@ -30,7 +15,7 @@
   <p>Occupant Data may include: name, contact details, lease and payment records, maintenance requests, messages, and documents relating to the Customer's tenants, occupants, and building contacts. It does not include special categories of personal data (e.g. health data) unless the Customer chooses to upload such content, which the Customer warrants it has a lawful basis to do.</p>
 
   <h2>4. Sub-processors</h2>
-  <p>The Customer authorises Tenants10 to engage the sub-processors listed in Section 8 of the <a href="privacy.html">Privacy Policy</a> (as updated from time to time) to provide the Service. Tenants10 remains responsible for each sub-processor's compliance with data-protection obligations equivalent to those in this DPA, and will give the Customer reasonable notice of any new sub-processor that processes Occupant Data, so the Customer may object on reasonable data-protection grounds.</p>
+  <p>The Customer authorises Tenants10 to engage the sub-processors listed in Section 8 of the <a href={path('privacy')}>Privacy Policy</a> (as updated from time to time) to provide the Service. Tenants10 remains responsible for each sub-processor's compliance with data-protection obligations equivalent to those in this DPA, and will give the Customer reasonable notice of any new sub-processor that processes Occupant Data, so the Customer may object on reasonable data-protection grounds.</p>
 
   <h2>5. Security measures</h2>
   <p>Tenants10 maintains technical and organisational measures appropriate to the risk, including: encryption of data in transit; role-based and building-scoped access control within the platform; audit logging of administrative actions; hosting of core infrastructure in Microsoft Azure's Switzerland North region; and regular review of sub-processor security practices.</p>
@@ -55,5 +40,3 @@
 
   <h2>12. Precedence &amp; contact</h2>
   <p>In the event of a conflict between this DPA and the Terms of Service regarding the processing of Occupant Data, this DPA prevails. For a signed/countersigned version of this DPA for your own records, or questions about a specific engagement (such as a larger facility-management customer with its own data-protection office), contact <a href="mailto:support@tenants10.com">support@tenants10.com</a>.</p>
-</main>
-</body></html>

@@ -45,31 +45,31 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tenants10.com/"/>
   </url>
   <url>
-    <loc>https://tenants10.com/terms.html</loc>
+    <loc>https://tenants10.com/terms/</loc>
     <lastmod>2026-11-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://tenants10.com/privacy.html</loc>
+    <loc>https://tenants10.com/privacy/</loc>
     <lastmod>2026-11-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://tenants10.com/cookies.html</loc>
+    <loc>https://tenants10.com/cookies/</loc>
     <lastmod>2026-11-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://tenants10.com/dpa.html</loc>
+    <loc>https://tenants10.com/dpa/</loc>
     <lastmod>2026-11-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://tenants10.com/imprint.html</loc>
+    <loc>https://tenants10.com/imprint/</loc>
     <lastmod>2026-11-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

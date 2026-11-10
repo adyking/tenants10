@@ -1,0 +1,36 @@
+---
+import type { Locale } from '../i18n/data';
+import { t } from '../i18n/data';
+import { localePath } from '../lib/seo';
+
+interface Props {
+  locale: Locale;
+  /** Absolute path (per locale) of THIS document on legal pages, e.g.
+   * { en: '/terms.html', de: '/de/terms.html', ... } -- the lang-switch
+   * then stays on the same document when switching language. Omit on the
+   * home page, where the switch just goes to each locale's home page. */
+  langLinks?: Record<Locale, string>;
+}
+const { locale, langLinks } = Astro.props;
+const d = t(locale);
+
+const home = localePath(locale);
+// On the home page itself, nav links are same-page anchors. Everywhere
+// else (legal pages), they point back to the right section of that
+// locale's home page.
+const isHome = !langLinks;
+const navHref = (anchor: string) => (isHome ? `#${anchor}` : `${home}#${anchor}`);
+const links = langLinks ?? { en: '/', de: '/de/', fr: '/fr/', it: '/it/' };
+---
+<header class="header">
+  <div class="shell header-inner">
+    <a href={isHome ? '#top' : home} class="brand header-brand" aria-label="Tenants10 AI Suite home"><img src="/assets/tenants10-logo.svg" width="1022" height="238" alt=""></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="navigation"><span set:html={d.flat['nav.menu']}></span> <span class="hamburger-icon" aria-hidden="true"><span></span><span></span><span></span></span></button>
+    <nav id="navigation" aria-label="Main navigation"><span class="nav-lens" aria-hidden="true"></span><a href={navHref('platform')}><span set:html={d.flat['nav.platform']}></span></a><a href={navHref('communication')}><span set:html={d.flat['nav.communication']}></span></a><a href={navHref('adoption')}><span set:html={d.flat['nav.adoption']}></span></a><a href={navHref('questions')}><span set:html={d.flat['nav.faq']}></span></a>
+      <div class="lang-switch" id="lang-switch" role="group" aria-label="Choose language">
+        <a href={links.en} aria-current={locale === 'en' ? 'page' : undefined}>EN</a><a href={links.de} aria-current={locale === 'de' ? 'page' : undefined}>DE</a><a href={links.fr} aria-current={locale === 'fr' ? 'page' : undefined}>FR</a><a href={links.it} aria-current={locale === 'it' ? 'page' : undefined}>IT</a>
+      </div>
+    </nav>
+    <a class="button button-small header-cta" href={navHref('demo')}><span set:html={d.flat['nav.cta']}></span> <svg><use href="#diagonal"/></svg></a>
+  </div>
+</header>
